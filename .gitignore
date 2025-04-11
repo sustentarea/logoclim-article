@@ -1,0 +1,12 @@
+*.knit.md
+*.utf8.md
+.Rapp.history
+.RData
+.Renviron
+.Rhistory
+.Ruserdata
+/*_cache/
+/.quarto/
+/.Rproj.user/
+/_freeze/
+/cache/

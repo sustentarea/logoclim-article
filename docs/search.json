@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "LogoClim: WorldClim in NetLogo",
+    "section": "Overview",
+    "text": "Overview\nThis document is a mirror for a paper made for hte Journal of Open Software (JOSS) about the LogoClim model. The final product is available in the paper folder.\n\n\n\n\n\n\nThe paper starts here."
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "LogoClim: WorldClim in NetLogo",
+    "section": "License",
+    "text": "License\n \nThe code in this paper is licensed under the MIT License, while the document are available under the Creative Commons Attribution 4.0 International License."
+  },
+  {
+    "objectID": "index.html#how-to-cite",
+    "href": "index.html#how-to-cite",
+    "title": "LogoClim: WorldClim in NetLogo",
+    "section": "How to Cite",
+    "text": "How to Cite\nIf you use this model in your research, please cite it to acknowledge the effort invested in its development and maintenance. Your citation helps support the ongoing improvement of the model.\nTo cite LogoClim in publications please use the following format:\nVartanian, D., & Carvalho, A. M. (2024). LogoClim: WorldClim in NetLogo [Software]. https://doi.org/10.17605/OSF.IO/EAPZU\nA BibTeX entry for LaTeX users is:\n@misc{vartanian2025,\n  title = {{LogoClim: WorldClim in NetLogo}},\n  author = {{Daniel Vartanian} and and {Aline Martins Carvalho}},\n  year = {2025},\n  doi = {10.17605/OSF.IO/EAPZU},\n  note = {NetLogo model},\n}"
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "LogoClim: WorldClim in NetLogo",
+    "section": "References",
+    "text": "References\n\n\nBaker, M. (2016). 1,500 scientists lift the lid on reproducibility. Nature, 533(7604), 452–454. https://doi.org/10.1038/533452a\n\n\nCarvalho, A. M. de, Klapka, C. S., Magalhães, A. R., Barbosa, B. B., Vartanian, D., & Pereira, E. B. (2023). Global syndemic: The impact of anthropogenic climate change on the health and nutrition of children under five years old attended by Brazil’s public health system (SUS) [Data set]. https://doi.org/10.17605/OSF.IO/8W36C\n\n\nFick, S. E., & Hijmans, R. J. (2017). WorldClim 2: New 1-km spatial resolution climate surfaces for global land areas. International Journal of Climatology, 37(12), 4302–4315. https://doi.org/10.1002/joc.5086\n\n\nO’Neill, B. C., Kriegler, E., Ebi, K. L., Kemp-Benedict, E., Riahi, K., Rothman, D. S., van Ruijven, B. J., van Vuuren, D. P., Birkmann, J., Kok, K., Levy, M., & Solecki, W. (2017). The roads ahead: Narratives for shared socioeconomic pathways describing world futures in the 21st century. Global Environmental Change, 42, 169–180. https://doi.org/10.1016/j.gloenvcha.2015.01.004\n\n\nPeng, R. D. (2011). Reproducible research in computational science. Science, 334(6060), 1226–1227. https://doi.org/10.1126/science.1213847\n\n\nRailsback, S. F., & Grimm, V. (2019). Agent-based and individual-based modeling: A practical introduction (2nd ed.). Princeton University Press."
+  }
+]
