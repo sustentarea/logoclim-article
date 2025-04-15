@@ -44,7 +44,7 @@ authors:
     orcid: 0000-0002-4900-5609
     affiliation: 3
 affiliations:
-- name: School of Arts, Sciences, and Humanities, University of São Paulo, São paulo, Brazil
+- name: School of Arts, Sciences, and Humanities, University of São Paulo, São Paulo, Brazil
   index: 1
 - name: School of Medicine, Queen's University Belfast, Belfast, United Kingdom
   index: 2

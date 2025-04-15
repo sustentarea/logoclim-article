@@ -42,7 +42,7 @@ website:
     background: "#272B33"
     right:
       - icon: github
-        href: https://sustentarea.github.io/logoclim-article/
+        href: https://github.com/sustentarea/logoclim-article/
         aria-label: GitHub
 
 lightbox:
