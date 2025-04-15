@@ -1,22 +1,17 @@
 # logoclim-article
 
 <!-- badges: start -->
-[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://img.shields.io/badge/Repo%20Status-Inactive-A6A82D.svg)](https://www.repostatus.org/#inactive)
+[![License: MIT](https://img.shields.io/badge/License-MIT-10D810.svg)](https://choosealicense.com/licenses/mit/)
 <!-- badges: end -->
 
 ## Overview
 
-🧒🏽🇧🇷🍔🍟🍕🍫🍭🍬🍿🥤🍩🍪🍰🧃
-
-This repository contains a data analysis exercise for the course [An Introduction to the R Programming Language](https://github.com/danielvartan/r-course).
-
-The report investigates differences in ultra-processed food consumption among Brazilian children aged 2 to 4 in 2022. The analysis focuses on clusters B and D of the Revised Multidimensional Index for Sustainable Food Systems ([MISFS-R](https://doi.org/10.1002/sd.2376)). You can view the full report [here](https://danielvartan.github.io/r-course-exercise/).
+This repository contains the files associated with the `LogoClim` model article, intended for submission to the *Journal of Open Source Software* ([JOSS](https://joss.theoj.org/)). LogoClim integrates climate data from [WorldClim 2.1](https://worldclim.org/) into [NetLogo](https://ccl.northwestern.edu/netlogo/), enabling the incorporation of real-world climate parameters into agent-based spatial models.
 
 ## License
 
-[![License:
-MIT](https://img.shields.io/badge/license-MIT-green.png)](https://opensource.org/license/mit)
+[![License: MIT](https://img.shields.io/badge/License-MIT-10D810.svg)](https://choosealicense.com/licenses/mit/)
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
@@ -28,18 +23,18 @@ License](https://creativecommons.org/licenses/by/4.0/).
 
 To cite this work, please use the following format:
 
-Vartanian, D., & Pereira, J. L. (2025). *An introduction to the R programming language: Class exercise* \[Report\]. Sustentarea Research and Extension Group at the University of São Paulo. <https://danielvartan.github.io/r-course-exercise/>
+Vartanian, D., Garcia, L. M. T., & Carvalho, A. M. (2025). *LogoClim: WorldClim in NetLogo* \[Report\]. Sustentarea Research and Extension Group at the University of São Paulo. <https://sustentarea.github.io/logoclim-article/>
 
 A BibTeX entry for LaTeX users is
 
 ```
 @techreport{vartanian2025,
-  title = {An introduction to the R programming language: Class exercise},
-  author = {{Daniel Vartanian} and {Jaqueline Lopes Pereira}},
+  title = {LogoClim: WorldClim in NetLogo},
+  author = {{Daniel Vartanian} and {Leandro Martin Totaro Garcia} and {Aline Martins Carvalho}},
   year = {2025},
   address = {São Paulo},
   institution = {Sustentarea Research and Extension Group at the University of São Paulo},
   langid = {en},
-  url = {https://danielvartan.github.io/r-course-exercise/}
+  url = {https://sustentarea.github.io/logoclim-article/}
 }
 ```

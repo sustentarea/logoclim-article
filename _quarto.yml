@@ -11,6 +11,7 @@ project:
   post-render: "R/_post-render.R"
 
 title: "LogoClim: WorldClim in NetLogo"
+author: "Daniel Vartanian, Leandro M. T. Garcia, & Aline M. de Carvalho"
 keyword: >
   Agent-based modeling, Climate change, Climate data visualization,
   Climate model integration, Climate projections, Climate simulation,
@@ -18,13 +19,13 @@ keyword: >
   Environmental sciences, Environmental simulation, Future climate scenarios,
   Geospatial analysis, Historical climate data, Models, NetLogo,
   R (programming language), Raster data, Reproducible research,
-  Shared socioeconomic pathways, Simulations, Spatial resolution,
-  SSPs, Time series, WorldClim
+  Shared socioeconomic pathways, Simulations, Spatial analysis,
+  Spatial resolution, SSPs, Time series, WorldClim
 date: today
 date-format: "YYYY-MM-DD"
 
 website:
-  favicon: images/sustentarea-icon.svg
+  favicon: images/favicon.svg
   site-url: https://sustentarea.github.io/logoclim-article/
   repo-url: https://github.com/sustentarea/logoclim-article/
   issue-url: https://github.com/sustentarea/logoclim-article/issues/
