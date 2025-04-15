@@ -29,10 +29,13 @@ The paper starts here.
 
 The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1960-2021) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways (SSPs, @oneill2017). All climate inputs are sourced from [WorldClim 2.1](https://worldclim.org/),  which provides high-resolution interpolated datasets derived from weather station records worldwide [@fick2017a].
 
-`LogoClim` follows the FAIR Principles for Research Software (FAIR4RS) [@barker2022] and is openly available on the [CoMSES Network](https://www.comses.net/) and [GitHub](https://github.com/sustentarea/logoclim).
+`LogoClim` follows the FAIR Principles for Research Software (FAIR4RS) [@barker2022] and is openly available on the [CoMSES Network](https://www.comses.net/) and GitHub. @fig-logoclim-interface showcases the functionality of the model.
 
+::: {#fig-logoclim-interface}
 ![](images/logoclim-interface.png){label="fig-logoclim-interface" width=100%}
 
+LogoClim's graphical user interface.
+:::
 # Statement of need
 
 <!-- A Statement of need section that clearly illustrates the research purpose of the software and places it in the context of related work. -->
@@ -59,7 +62,7 @@ Finally, we recognize the [Sustentarea](https://www.fsp.usp.br/sustentarea/) Res
 
 # Author contributions
 
-The roles below were defined based on the Contributor Roles Taxonomy([CRediT](https://credit.niso.org/)).
+The roles below were defined based on the Contributor Roles Taxonomy ([CRediT](https://credit.niso.org/)).
 
 [**Daniel Vartanian**](https://orcid.org/0000-0001-7782-759X): Conceptualization, Methodology, Data curation, Software, Validation, Project administration, Writing – Review & editing.
 
