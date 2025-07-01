@@ -25,7 +25,7 @@ The paper starts here.
 
 The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1951-2024) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways ([SSPs](https://climatedata.ca/resource/understanding-shared-socio-economic-pathways-ssps/), @oneill2017). All climate inputs come from [WorldClim 2.1](https://worldclim.org/), a widely used source of high-resolution, interpolated climate datasets based on weather station observations worldwide [@fick2017a], available for academic and other non-commercial use.
 
-`LogoClim` follows the FAIR Principles for Research Software ([FAIR4RS](https://fair-software.eu/); @barker2022) and is openly available on the [CoMSES Network](https://www.comses.net/) and [GitHub](https://github.com/sustentarea/logoclim). Figures -@fig-logoclim-interface-1 and -@fig-logoclim-interface-2 illustrate the model's interface and functionality.
+`LogoClim` follows the FAIR Principles for Research Software ([FAIR4RS](https://fair-software.eu/); @barker2022) and is openly available on the [CoMSES Network](https://www.comses.net/) and [GitHub](https://github.com/sustentarea/logoclim). @fig-logoclim-interface-1 and @fig-logoclim-interface-2 illustrate the model's interface and functionality.
 
 ::: {#fig-logoclim-interface-1}
 ![](images/logoclim-interface-bra-10m-hmwd.png){label="fig-logoclim-interface-1" width=100%}

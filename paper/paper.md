@@ -63,9 +63,9 @@ bibliography: paper.bib
 
 The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1951-2024) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways ([SSPs](https://climatedata.ca/resource/understanding-shared-socio-economic-pathways-ssps/), @oneill2017). All climate inputs come from [WorldClim 2.1](https://worldclim.org/), a widely used source of high-resolution, interpolated climate datasets based on weather station observations worldwide [@fick2017a], available for academic and other non-commercial use.
 
-`LogoClim` follows the FAIR Principles for Research Software ([FAIR4RS](https://fair-software.eu/); @barker2022) and is openly available on the [CoMSES Network](https://www.comses.net/) and [GitHub](https://github.com/sustentarea/logoclim). Figures \autoref{fig-logoclim-interface-1} and \autoref{fig-logoclim-interface-2} illustrate the model's interface and functionality.
+`LogoClim` follows the FAIR Principles for Research Software ([FAIR4RS](https://fair-software.eu/); @barker2022) and is openly available on the [CoMSES Network](https://www.comses.net/) and [GitHub](https://github.com/sustentarea/logoclim). \autoref{fig:logoclim-interface-1} and \autoref{fig:logoclim-interface-2} illustrate the model's interface and functionality.
 
-![LogoClim Graphical User Interface — Brazil (Spatial resolution: 10 arc-seconds, approximately 340 km² at the equator).\label{fig-logoclim-interface-1}](images/logoclim-interface-bra-10m-hmwd.png){width=100%}
+![LogoClim Graphical User Interface — Brazil (Spatial resolution: 10 arc-seconds, approximately 340 km² at the equator).\label{fig:logoclim-interface-1}](images/logoclim-interface-bra-10m-hmwd.png){width=100%}
 
 # Statement of need
 
@@ -85,7 +85,7 @@ In addition to latitude and longitude data points, `LogoClim` supports simulatio
 
 While you can download the original datasets directly from WorldClim 2.1, they must first be converted to ASCII raster format before being used in NetLogo. To simplify this process, we recommend using the preprocessed datasets included in the model's [OSF repository](https://doi.org/10.17605/OSF.IO/RE95Z). We have already converted the data for many countries and resolutions, making it easier to get started. These datasets can be reproduced by running the [Quarto](https://quarto.org/) notebooks located in the model's `qmd` folder.
 
-![LogoClim Graphical User Interface — United Kingdom (Spatial resolution: 30 arc-seconds, approximately 1 km² at the equator).\label{fig-logoclim-interface-1}](images/logoclim-interface-gbr-30s-hcd.png){width=100%}
+![LogoClim Graphical User Interface — United Kingdom (Spatial resolution: 30 arc-seconds, approximately 1 km² at the equator).\label{fig:logoclim-interface-2}](images/logoclim-interface-gbr-30s-hcd.png){width=100%}
 
 # Acknowledgements
 
