@@ -57,35 +57,23 @@ bibliography: paper.bib
 ---
 
 <!-- %:::% paper begin %:::% -->
-<!-- The paper should be between 250-1000 words. -->
-
 # Summary
-
-<!-- A summary describing the high-level functionality and purpose of the software for a diverse, non-specialist audience. -->
 
 `LogoClim` is a [NetLogo](https://ccl.northwestern.edu/netlogo/) model for simulating and visualizing global climate conditions. It allows researchers to integrate high-resolution climate data into agent-based models, supporting reproducible research in ecology, agriculture, environmental science, and other fields that rely on climate data integration.
 
 The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1951-2024) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways ([SSPs](https://climatedata.ca/resource/understanding-shared-socio-economic-pathways-ssps/), @oneill2017). All climate inputs come from [WorldClim 2.1](https://worldclim.org/), a widely used source of high-resolution, interpolated climate datasets based on weather station observations worldwide [@fick2017a], available for academic and other non-commercial use.
 
-`LogoClim` follows the FAIR Principles for Research Software ([FAIR4RS](https://fair-software.eu/); @barker2022) and is openly available on the [CoMSES Network](https://www.comses.net/) and [GitHub](https://github.com/sustentarea/logoclim). Figures -@fig-logoclim-interface-1 and -@fig-logoclim-interface-2 illustrate the model's interface and functionality.
+`LogoClim` follows the FAIR Principles for Research Software ([FAIR4RS](https://fair-software.eu/); @barker2022) and is openly available on the [CoMSES Network](https://www.comses.net/) and [GitHub](https://github.com/sustentarea/logoclim). Figures \autoref{fig-logoclim-interface-1} and \autoref{fig-logoclim-interface-2} illustrate the model's interface and functionality.
 
-::: {#fig-logoclim-interface-1}
-![](images/logoclim-interface-bra-10m-hmwd.png){label="fig-logoclim-interface-1" width=100%}
-
-LogoClim Graphical User Interface — Brazil (Spatial resolution: 10 arc-seconds, approximately 340 km² at the equator).
-:::
+![LogoClim Graphical User Interface — Brazil (Spatial resolution: 10 arc-seconds, approximately 340 km² at the equator).\label{fig-logoclim-interface-1}](images/logoclim-interface-bra-10m-hmwd.png){width=100%}
 
 # Statement of need
-
-<!-- A Statement of need section that clearly illustrates the research purpose of the software and places it in the context of related work. -->
 
 The lack of reproducibility is a major concern in science [@baker2016], including in computational research [@peng2011]. This challenge is particularly relevant for agent-based models, which are used to simulate complex phenomena [@grimm2006a; @grimm2020]. One effective strategy to address this issue is the development of open, specialized tools that enhance transparency and promote standardization, and reusability among researchers [@ram2019; @barba2022]. This is why `LogoClim` was created.
 
 The `LogoClim` model was developed for seamless integration with other models through NetLogo's LevelSpace extension [@hjorth2020], which enables parallel execution and data exchange between models. This integration capability makes it particularly valuable for agent-based simulations that incorporate climate data to study ecological, environmental, or social processes affected by climate conditions.
 
 # Motivation
-
-<!-- Mention (if applicable) a representative set of past or ongoing research projects using the software and recent scholarly publications enabled by it. -->
 
 The model was originally developed as part of a project by the [Sustentarea](https://www.fsp.usp.br/sustentarea/) Research and Extension Center, aimed at evaluating the impact of climate change on the health and nutrition of Brazilian children under five years old [@carvalho2023a]. During development, however, we recognized that the model had broader potential beyond the scope of our initial study. `LogoClim` can now be used as a submodel within agent-based models designed to help researchers, policymakers, and practitioners explore the potential impacts of climate change across different contexts and geographical areas.
 
@@ -97,15 +85,9 @@ In addition to latitude and longitude data points, `LogoClim` supports simulatio
 
 While you can download the original datasets directly from WorldClim 2.1, they must first be converted to ASCII raster format before being used in NetLogo. To simplify this process, we recommend using the preprocessed datasets included in the model's [OSF repository](https://doi.org/10.17605/OSF.IO/RE95Z). We have already converted the data for many countries and resolutions, making it easier to get started. These datasets can be reproduced by running the [Quarto](https://quarto.org/) notebooks located in the model's `qmd` folder.
 
-::: {#fig-logoclim-interface-2}
-![](images/logoclim-interface-gbr-30s-hcd.png){label="fig-logoclim-interface-2" width=100%}
-
-LogoClim Graphical User Interface — United Kingdom (Spatial resolution: 30 arc-seconds, approximately 1 km² at the equator).
-:::
+![LogoClim Graphical User Interface — United Kingdom (Spatial resolution: 30 arc-seconds, approximately 1 km² at the equator).\label{fig-logoclim-interface-1}](images/logoclim-interface-gbr-30s-hcd.png){width=100%}
 
 # Acknowledgements
-
-<!-- Acknowledgement of any financial support. -->
 
 We gratefully acknowledge the contributions of [Stephen E. Fick](https://orcid.org/0000-0002-3548-6966), [Robert J. Hijmans](https://orcid.org/0000-0001-5872-2872), and the entire [WorldClim](https://worldclim.org/) team for their dedication to developing and maintaining the WorldClim datasets. We also thank the World Climate Research Programme ([WCRP](https://www.wcrp-climate.org/)), which, through its Working Group on Coupled Modelling, coordinated and promoted the Coupled Model Intercomparison Project Phase 6 ([CMIP6](https://pcmdi.llnl.gov/CMIP6/)).
 

@@ -131,6 +131,17 @@ data <-
 
 data |> readr::write_lines(here::here("paper", "paper.md"))
 
+# Warn about fixing figures and figure references -----
+
+cli::cli_alert_warning(
+  paste0(
+    "Fix figures and figure references in {.strong paper/paper.md} ",
+    "and remove the comment tags. ",
+    "See {.url https://joss.readthedocs.io/en/latest/example_paper.html} ",
+    "for more information."
+  )
+)
+
 # Check If the Script Ran Successfully -----
 
 beepr::beep(1)
