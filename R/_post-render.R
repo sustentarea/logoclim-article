@@ -21,6 +21,53 @@ data <-
 
 data |> readr::write_lines(file)
 
+# Replace special characters -----
+
+files <- c(
+  here::here("README.md"),
+  here::here("index.qmd"),
+  here::here("paper", "paper.md"),
+  here::here("references.bib"),
+  here::here("paper", "paper.bib")
+)
+
+special_characters <- list(
+  # em_dash = c("–", "-"),
+  apostrophe = c("’", "'")
+)
+
+for (i in files) {
+  for (j in special_characters) {
+    data <-
+      i |>
+      readr::read_lines() |>
+      stringr::str_replace_all(
+        pattern = j[1],
+        replacement = j[2]
+      )
+
+    data |> readr::write_lines(i)
+  }
+}
+
+# Remove `file` field from `.bib` files -----
+
+files <- c(
+  here::here("references.bib"),
+  here::here("paper", "paper.bib")
+)
+
+for (i in files) {
+  for (j in special_characters) {
+    data <-
+      i |>
+      readr::read_lines() |>
+      stringr::str_subset("^  file = |^file = ", negate = TRUE)
+
+    data |> readr::write_lines(i)
+  }
+}
+
 # Create/Update JOSS Paper -----
 
 if (!checkmate::test_directory_exists(here::here("paper"))) {

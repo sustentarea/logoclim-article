@@ -4,21 +4,28 @@
     "href": "index.html#overview",
     "title": "LogoClim: WorldClim in NetLogo",
     "section": "Overview",
-    "text": "Overview\nThis document is a mirror for a paper made for the Journal of Open Source Software (JOSS) about the LogoClim model. The final product is available in the paper folder.\n\n\n\n\n\n\nThe paper starts here."
+    "text": "Overview\nThis document is a mirror of a paper prepared for the Journal of Open Source Software (JOSS), describing the LogoClim model. The final version is available in the paper folder.\n\n\n\n\n\n\nThe paper starts here."
+  },
+  {
+    "objectID": "index.html#hot-to-cite",
+    "href": "index.html#hot-to-cite",
+    "title": "LogoClim: WorldClim in NetLogo",
+    "section": "Hot to cite",
+    "text": "Hot to cite\nTo cite this paper in publications please use the following format:\nVartanian, D., Garcia, L., & Carvalho, A. M. (2025). LogoClim: WorldClim in NetLogo [Report]. Sustentarea Research and Extension Group at the University of São Paulo. https://sustentarea.github.io/logoclim-article\nA BibTeX entry for LaTeX users is\n@techreport{vartanian2025,\n  title = {LogoClim: WorldClim in NetLogo},\n  author = {{Daniel Vartanian} and {Leandro Garcia} and {Aline Martins de Carvalho}},\n  year = {2025},\n  address = {São Paulo},\n  institution = {Sustentarea Research and Extension Group at the University of São Paulo},\n  langid = {en},\n  url = {https://sustentarea.github.io/logoclim-article}\n}"
   },
   {
     "objectID": "index.html#license",
     "href": "index.html#license",
     "title": "LogoClim: WorldClim in NetLogo",
     "section": "License",
-    "text": "License\n \nThe code in this paper is licensed under the MIT License, while the document are available under the Creative Commons Attribution 4.0 International License."
+    "text": "License\n\n \nThis document is licensed under the Creative Commons Attribution 4.0 International License. This means you can share and adapt the material for any purpose, even commercially, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made."
   },
   {
-    "objectID": "index.html#citation",
-    "href": "index.html#citation",
+    "objectID": "index.html#acknowledgements-1",
+    "href": "index.html#acknowledgements-1",
     "title": "LogoClim: WorldClim in NetLogo",
-    "section": "Citation",
-    "text": "Citation\nTo cite this paper in publications please use the following format:\nVartanian, D., Garcia, L. M. T., & Carvalho, A. M. (2025). LogoClim: WorldClim in NetLogo [Report]. Sustentarea Research and Extension Group at the University of São Paulo. https://sustentarea.github.io/logoclim-article/\nA BibTeX entry for LaTeX users is\n@techreport{vartanian2025,\n  title = {LogoClim: WorldClim in NetLogo},\n  author = {{Daniel Vartanian} and {Leandro Martin Totaro Garcia} and {Aline Martins de Carvalho}},\n  year = {2025},\n  address = {São Paulo},\n  institution = {Sustentarea Research and Extension Group at the University of São Paulo},\n  langid = {en},\n  url = {https://sustentarea.github.io/logoclim-article/}\n}"
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\nThis work was developed with support from the Sustentarea Research and Extension Center at the University of São Paulo (USP).\n\nThis work was supported by the Department of Science and Technology of the Secretariat of Science, Technology, and Innovation and of the Health Economic-Industrial Complex (SECTICS) of the Ministry of Health of Brazil, and the National Council for Scientific and Technological Development (CNPq) (grant no. 444588/2023-0)"
   },
   {
     "objectID": "index.html#references",

@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.7.30">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Daniel Vartanian, Leandro M. T. Garcia, &amp; Aline M. de Carvalho">
-<meta name="dcterms.date" content="2025-04-15">
+<meta name="author" content="Daniel Vartanian, Leandro Garcia, &amp; Aline M. de Carvalho">
+<meta name="dcterms.date" content="2025-07-01">
 <title>LogoClim: WorldClim in NetLogo</title>
 <style>
 code{white-space: pre-wrap;}
@@ -18,6 +18,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -43,17 +78,18 @@ div.csl-indent {
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
-<link href="./images/favicon.svg" rel="icon" type="image/svg+xml">
+<link href="./images/sustentarea-icon.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2ade4c202a29add217eadf66f1be2696.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-6fd01158ae724d1690efadd2da0cc0f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e1ba086154b9210c271e18ff7a86249d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bfbe867771e8028dbbc8a6959ba600d2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -76,17 +112,17 @@ div.csl-indent {
 <meta property="og:description" content="">
 <meta property="og:image" content="https://sustentarea.github.io/logoclim-article/images/og-image.png">
 <meta property="og:image:alt" content="Sustentarea Research and Extension Group">
-<meta property="og:image:height" content="600">
-<meta property="og:image:width" content="900">
+<meta property="og:image:height" content="1600">
+<meta property="og:image:width" content="2400">
 <meta name="citation_title" content="LogoClim: WorldClim in NetLogo">
-<meta name="citation_author" content="Daniel Vartanian, Leandro M. T. Garcia, &amp;amp; Aline M. de Carvalho">
-<meta name="citation_publication_date" content="2025-04-15">
-<meta name="citation_cover_date" content="2025-04-15">
+<meta name="citation_author" content="Daniel Vartanian, Leandro Garcia, &amp;amp; Aline M. de Carvalho">
+<meta name="citation_publication_date" content="2025-07-01">
+<meta name="citation_cover_date" content="2025-07-01">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-04-15">
+<meta name="citation_online_date" content="2025-07-01">
 <meta name="citation_fulltext_html_url" content="https://sustentarea.github.io/logoclim-article/">
 <meta name="citation_language" content="en">
-<meta name="citation_reference" content="citation_title=1,500 scientists lift the lid on reproducibility;,citation_abstract=Survey sheds light on the “crisis” rocking research.;,citation_author=Monya Baker;,citation_publication_date=2016-05-01;,citation_cover_date=2016-05-01;,citation_year=2016;,citation_fulltext_html_url=https://www.nature.com/articles/533452a;,citation_issue=7604;,citation_doi=10.1038/533452a;,citation_issn=1476-4687;,citation_volume=533;,citation_language=en-US;,citation_journal_title=Nature;,citation_publisher=Nature Publishing Group;">
+<meta name="citation_reference" content="citation_title=1,500 scientists lift the lid on reproducibility;,citation_abstract=Survey sheds light on the &amp;amp;amp;quot;crisis&amp;quot; rocking research.;,citation_author=Monya Baker;,citation_publication_date=2016-05-01;,citation_cover_date=2016-05-01;,citation_year=2016;,citation_fulltext_html_url=https://www.nature.com/articles/533452a;,citation_issue=7604;,citation_doi=10.1038/533452a;,citation_issn=1476-4687;,citation_volume=533;,citation_language=en-US;,citation_journal_title=Nature;,citation_publisher=Nature Publishing Group;">
 <meta name="citation_reference" content="citation_title=Defining the role of open source software in research reproducibility;,citation_abstract=I explain the success of open source software (OSS) from the perspectives of connectivism and the language-action framework. Reproducibility engenders trust, which we build via conversations, and OSS practices help us to learn how to be more effective learning together, contributing to the same goal.;,citation_author=Lorena A. Barba;,citation_publication_date=2022-08;,citation_cover_date=2022-08;,citation_year=2022;,citation_fulltext_html_url=https://ieeexplore.ieee.org/document/9847328;,citation_issue=8;,citation_doi=10.1109/MC.2022.3177133;,citation_issn=1558-0814;,citation_volume=55;,citation_journal_title=Computer;">
 <meta name="citation_reference" content="citation_title=Introducing the FAIR Principles for research software;,citation_abstract=Research software is a fundamental and vital part of research, yet significant challenges to discoverability, productivity, quality, reproducibility, and sustainability exist. Improving the practice of scholarship is a common goal of the open science, open source, and FAIR (Findable, Accessible, Interoperable and Reusable) communities and research software is now being understood as a type of digital object to which FAIR should be applied. This emergence reflects a maturation of the research community to better understand the crucial role of FAIR research software in maximising research value. The FAIR for Research Software (FAIR4RS) Working Group has adapted the FAIR Guiding Principles to create the FAIR Principles for Research Software (FAIR4RS Principles). The contents and context of the FAIR4RS Principles are summarised here to provide the basis for discussion of their adoption. Examples of implementation by organisations are provided to share information on how to maximise the value of research outputs, and to encourage others to amplify the importance and impact of this work.;,citation_author=Michelle Barker;,citation_author=Neil P. Chue Hong;,citation_author=Daniel S. Katz;,citation_author=Anna-Lena Lamprecht;,citation_author=Carlos Martinez-Ortiz;,citation_author=Fotis Psomopoulos;,citation_author=Jennifer Harrow;,citation_author=Leyla Jael Castro;,citation_author=Morane Gruenpeter;,citation_author=Paula Andrea Martinez;,citation_author=Tom Honeyman;,citation_publication_date=2022-10-14;,citation_cover_date=2022-10-14;,citation_year=2022;,citation_fulltext_html_url=https://www.nature.com/articles/s41597-022-01710-x;,citation_issue=1;,citation_doi=10.1038/s41597-022-01710-x;,citation_issn=2052-4463;,citation_volume=9;,citation_language=en-US;,citation_journal_title=Scientific Data;,citation_journal_abbrev=Sci Data;,citation_publisher=Nature Publishing Group;">
 <meta name="citation_reference" content="citation_title=Global syndemic: The impact of anthropogenic climate change on the health and nutrition of children under five years old attended by Brazil’s public health system (SUS);,citation_abstract=This research project investigates the impact of anthropogenic climate change on the health and nutrition of children under five years old attended by Brazil’s public health system (SUS). By analyzing datasets on climate change, health records, and nutritional surveys, combined with the application of complex system techniques, this research seeks to uncover hidden patterns and correlations that could inform policies for mitigating the adverse effects of climate change on children’s health and well-being.;,citation_author=Aline Martins Carvalho;,citation_author=Cecilia Stanzani Klapka;,citation_author=Arthur Ramalho Magalhães;,citation_author=Brena Barreto Barbosa;,citation_author=Daniel Vartanian;,citation_author=Estela Barici Pereira;,citation_publication_date=2023;,citation_cover_date=2023;,citation_year=2023;,citation_doi=10.17605/OSF.IO/8W36C;">
@@ -98,7 +134,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=Reproducible research in computational science;,citation_abstract=Computational science has led to exciting new developments, but the nature of the work has exposed limitations in our ability to evaluate published findings. Reproducibility has the potential to serve as a minimum standard for judging scientific claims when full independent replication of a study is not possible.;,citation_author=Roger D. Peng;,citation_publication_date=2011-12-02;,citation_cover_date=2011-12-02;,citation_year=2011;,citation_fulltext_html_url=https://www.science.org/doi/10.1126/science.1213847;,citation_issue=6060;,citation_doi=10.1126/science.1213847;,citation_volume=334;,citation_journal_title=Science;,citation_publisher=American Association for the Advancement of Science;">
 <meta name="citation_reference" content="citation_title=A community of practice around peer review for long-term research software sustainability;,citation_abstract=Scientific open source projects are responsible for enabling many of the major advances in modern science including recent breakthroughs such as the Laser Interferometer Gravitational-Wave Observatory project recognized in the 2017 Nobel Prize for physics. However, much of this software ecosystem is developed ad hoc with no regard for sustainable software development practices. This problem is further compounded by the fact that researchers who develop software have little in the way of resources or academic recognition for their efforts. The rOpenSci Project, founded in 2011 with the explicit mission of developing software to support reproducible science, has in recent years undertaken an effort to improve the long tail of scientific software. In this paper, we describe our software peer-review system, which brings together the best of traditional academic review with new ideas from industry code review.;,citation_author=Karthik Ram;,citation_author=Carl Boettiger;,citation_author=Scott Chamberlain;,citation_author=Noam Ross;,citation_author=Maëlle Salmon;,citation_author=Stefanie Butland;,citation_publication_date=2019-03;,citation_cover_date=2019-03;,citation_year=2019;,citation_fulltext_html_url=https://ieeexplore.ieee.org/document/8554180;,citation_issue=2;,citation_doi=10.1109/MCSE.2018.2882753;,citation_issn=1558-366X;,citation_volume=21;,citation_language=en-US;,citation_journal_title=Computing in Science &amp;amp;amp; Engineering;">
 </head>
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
@@ -127,12 +163,16 @@ div.csl-indent {
 <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   <li><a href="#statement-of-need" id="toc-statement-of-need" class="nav-link" data-scroll-target="#statement-of-need">Statement of need</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How it works</a></li>
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#author-contributions" id="toc-author-contributions" class="nav-link" data-scroll-target="#author-contributions">Author contributions</a></li>
   <li>
-<a href="#author-contributions" id="toc-author-contributions" class="nav-link" data-scroll-target="#author-contributions">Author contributions</a>
+<a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information">Additional information</a>
   <ul>
-<li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
+<li><a href="#hot-to-cite" id="toc-hot-to-cite" class="nav-link" data-scroll-target="#hot-to-cite">Hot to cite</a></li>
+  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
+  <li><a href="#acknowledgements-1" id="toc-acknowledgements-1" class="nav-link" data-scroll-target="#acknowledgements-1">Acknowledgements</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </li>
@@ -150,14 +190,14 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Daniel Vartanian, Leandro M. T. Garcia, &amp; Aline M. de Carvalho </p>
+             <p>Daniel Vartanian, Leandro Garcia, &amp; Aline M. de Carvalho </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2025-04-15</p>
+      <p class="date">2025-07-01</p>
     </div>
   </div>
   
@@ -166,9 +206,9 @@ div.csl-indent {
   
 
 
-</header><!-- badges: start --><p><a href="https://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/badge/License-MIT-10D810.svg" class="img-fluid" alt="License: MIT"></a> <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a> <!-- badges: end --></p>
+</header><!-- badges: start --><p><a href="https://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/badge/license-MIT-green.svg" class="img-fluid" alt="License: MIT"></a> <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a> <!-- badges: end --></p>
 <section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This document is a mirror for a paper made for the <em>Journal of Open Source Software</em> (<a href="https://joss.theoj.org/">JOSS</a>) about the <a href="https://github.com/sustentarea/logoclim"><code>LogoClim</code></a> model. The final product is available in the <code>paper</code> folder.</p>
+<p>This document is a mirror of a paper prepared for the <em>Journal of Open Source Software</em> (<a href="https://joss.theoj.org/">JOSS</a>), describing the <a href="https://github.com/sustentarea/logoclim"><code>LogoClim</code></a> model. The final version is available in the <code>paper</code> folder.</p>
 <div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -183,34 +223,48 @@ div.csl-indent {
 <!-- The paper should be between 250-1000 words. -->
 </section><section id="summary" class="level1"><h1>Summary</h1>
 <!-- A summary describing the high-level functionality and purpose of the software for a diverse, non-specialist audience. -->
-<p><code>LogoClim</code> is a <a href="https://ccl.northwestern.edu/netlogo/">NetLogo</a> model designed to simulate and visualize climate conditions, serving as a powerful tool for exploring both historical and projected climate data. Its primary goal is to facilitate the integration of climate data into agent-based models (ABMs) and enhance the reproducibility of these simulations.</p>
-<p>The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1960-2021) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways (SSPs, <span class="citation" data-cites="oneill2017">O’Neill et al. (<a href="#ref-oneill2017" role="doc-biblioref">2017</a>)</span>). All climate inputs are sourced from <a href="https://worldclim.org/">WorldClim 2.1</a>, which provides high-resolution interpolated datasets derived from weather station records worldwide <span class="citation" data-cites="fick2017a">(<a href="#ref-fick2017a" role="doc-biblioref">Fick &amp; Hijmans, 2017</a>)</span>.</p>
-<p><code>LogoClim</code> follows the FAIR Principles for Research Software (FAIR4RS) <span class="citation" data-cites="barker2022">(<a href="#ref-barker2022" role="doc-biblioref">Barker et al., 2022</a>)</span> and is openly available on the <a href="https://www.comses.net/">CoMSES Network</a> and GitHub. <a href="#fig-logoclim-interface" class="quarto-xref">Figure&nbsp;1</a> showcases the functionality of the model.</p>
-<div id="fig-logoclim-interface" class="quarto-float quarto-figure quarto-figure-center anchored" data-label="fig-logoclim-interface">
-<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-logoclim-interface-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: LogoClim’s graphical user interface.
-</figcaption><div aria-describedby="fig-logoclim-interface-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/logoclim-interface.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: LogoClim’s graphical user interface."><img src="images/logoclim-interface.png" class="img-fluid figure-img" style="width:100.0%" data-label="fig-logoclim-interface"></a>
+<p><code>LogoClim</code> is a <a href="https://ccl.northwestern.edu/netlogo/">NetLogo</a> model for simulating and visualizing global climate conditions. It allows researchers to integrate high-resolution climate data into agent-based models, supporting reproducible research in ecology, agriculture, environmental science, and other fields that rely on climate data integration.</p>
+<p>The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1951-2024) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways (<a href="https://climatedata.ca/resource/understanding-shared-socio-economic-pathways-ssps/">SSPs</a>, <span class="citation" data-cites="oneill2017">O’Neill et al. (<a href="#ref-oneill2017" role="doc-biblioref">2017</a>)</span>). All climate inputs come from <a href="https://worldclim.org/">WorldClim 2.1</a>, a widely used source of high-resolution, interpolated climate datasets based on weather station observations worldwide <span class="citation" data-cites="fick2017a">(<a href="#ref-fick2017a" role="doc-biblioref">Fick &amp; Hijmans, 2017</a>)</span>, available for academic and other non-commercial use.</p>
+<p><code>LogoClim</code> follows the FAIR Principles for Research Software (<a href="https://fair-software.eu/">FAIR4RS</a>; <span class="citation" data-cites="barker2022">Barker et al. (<a href="#ref-barker2022" role="doc-biblioref">2022</a>)</span>) and is openly available on the <a href="https://www.comses.net/">CoMSES Network</a> and <a href="https://github.com/sustentarea/logoclim">GitHub</a>. Figures <a href="#fig-logoclim-interface-1" class="quarto-xref">1</a> and <a href="#fig-logoclim-interface-2" class="quarto-xref">2</a> illustrate the model’s interface and functionality.</p>
+<div id="fig-logoclim-interface-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-label="fig-logoclim-interface-1">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-logoclim-interface-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: LogoClim Graphical User Interface — Brazil (Spatial resolution: 10 arc-seconds, approximately 340 km² at the equator).
+</figcaption><div aria-describedby="fig-logoclim-interface-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/logoclim-interface-bra-10m-hmwd.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: LogoClim Graphical User Interface — Brazil (Spatial resolution: 10 arc-seconds, approximately 340 km² at the equator)."><img src="images/logoclim-interface-bra-10m-hmwd.png" class="img-fluid figure-img" style="width:100.0%" data-label="fig-logoclim-interface-1"></a>
 </div>
 </figure>
 </div>
 </section><section id="statement-of-need" class="level1"><h1>Statement of need</h1>
 <!-- A Statement of need section that clearly illustrates the research purpose of the software and places it in the context of related work. -->
-<p>The lack of reproducibility is a major concern in science <span class="citation" data-cites="baker2016">(<a href="#ref-baker2016" role="doc-biblioref">Baker, 2016</a>)</span>, including in computational research <span class="citation" data-cites="peng2011">(<a href="#ref-peng2011" role="doc-biblioref">Peng, 2011</a>)</span>. This challenge is particularly relevant for agent-based models, which are widely used to simulate complex phenomena <span class="citation" data-cites="grimm2006a grimm2020">(<a href="#ref-grimm2006a" role="doc-biblioref">Grimm et al., 2006</a>, <a href="#ref-grimm2020" role="doc-biblioref">2020</a>)</span>. One effective strategy to address this issue is the development of open, specialized tools that enhance transparency, standardization, and reusability among researchers <span class="citation" data-cites="ram2019 barba2022">(<a href="#ref-barba2022" role="doc-biblioref">Barba, 2022</a>; <a href="#ref-ram2019" role="doc-biblioref">Ram et al., 2019</a>)</span>. This is why <code>LogoClim</code> was created.</p>
-<p>The <code>LogoClim</code> model was developed for seamless integration with other models through NetLogo’s LevelSpace (<code>ls</code>) extension <span class="citation" data-cites="hjorth2020">(<a href="#ref-hjorth2020" role="doc-biblioref">Hjorth et al., 2020</a>)</span>, which enables parallel execution and data exchange between models. This integration capability makes it particularly valuable for agent-based simulations that incorporate climate data to study ecological, environmental, or social processes affected by climate conditions.</p>
+<p>The lack of reproducibility is a major concern in science <span class="citation" data-cites="baker2016">(<a href="#ref-baker2016" role="doc-biblioref">Baker, 2016</a>)</span>, including in computational research <span class="citation" data-cites="peng2011">(<a href="#ref-peng2011" role="doc-biblioref">Peng, 2011</a>)</span>. This challenge is particularly relevant for agent-based models, which are used to simulate complex phenomena <span class="citation" data-cites="grimm2006a grimm2020">(<a href="#ref-grimm2006a" role="doc-biblioref">Grimm et al., 2006</a>, <a href="#ref-grimm2020" role="doc-biblioref">2020</a>)</span>. One effective strategy to address this issue is the development of open, specialized tools that enhance transparency and promote standardization, and reusability among researchers <span class="citation" data-cites="ram2019 barba2022">(<a href="#ref-barba2022" role="doc-biblioref">Barba, 2022</a>; <a href="#ref-ram2019" role="doc-biblioref">Ram et al., 2019</a>)</span>. This is why <code>LogoClim</code> was created.</p>
+<p>The <code>LogoClim</code> model was developed for seamless integration with other models through NetLogo’s LevelSpace extension <span class="citation" data-cites="hjorth2020">(<a href="#ref-hjorth2020" role="doc-biblioref">Hjorth et al., 2020</a>)</span>, which enables parallel execution and data exchange between models. This integration capability makes it particularly valuable for agent-based simulations that incorporate climate data to study ecological, environmental, or social processes affected by climate conditions.</p>
+</section><section id="motivation" class="level1"><h1>Motivation</h1>
 <!-- Mention (if applicable) a representative set of past or ongoing research projects using the software and recent scholarly publications enabled by it. -->
-<p>The model was created as part of a project of the <a href="https://www.fsp.usp.br/sustentarea/">Sustentarea</a> Research and Extension Center, which aims to evaluate the impact of climate change on the health and nutrition of Brazilian children under five years old <span class="citation" data-cites="carvalho2023a">(<a href="#ref-carvalho2023a" role="doc-biblioref">Carvalho et al., 2023</a>)</span>. <code>LogoClim</code> functions as a submodel for an ABM designed to help researchers, policymakers, and practitioners better understand the potential consequences of climate change on this vulnerable population.</p>
+<p>The model was originally developed as part of a project by the <a href="https://www.fsp.usp.br/sustentarea/">Sustentarea</a> Research and Extension Center, aimed at evaluating the impact of climate change on the health and nutrition of Brazilian children under five years old <span class="citation" data-cites="carvalho2023a">(<a href="#ref-carvalho2023a" role="doc-biblioref">Carvalho et al., 2023</a>)</span>. During development, however, we recognized that the model had broader potential beyond the scope of our initial study. <code>LogoClim</code> can now be used as a submodel within agent-based models designed to help researchers, policymakers, and practitioners explore the potential impacts of climate change across different contexts and geographical areas.</p>
+</section><section id="how-it-works" class="level1"><h1>How it works</h1>
+<p><code>LogoClim</code> operates on a grid of patches, where each patch represents a geographical area and stores values for latitude, longitude, and selected climate variables. During the simulation, patches update their colors based on the data values. The results can be visualized on a map, accompanied by plots that display the mean, minimum, maximum, and standard deviation of the selected variable over time.</p>
+<p>In addition to latitude and longitude data points, <code>LogoClim</code> supports simulation with all three climate data series provided by <a href="https://worldclim.org/">WorldClim 2.1</a>: long-term historical climate averages (1970-2000), historical monthly weather (1951-2024), and future climate projections (2021-2100). Each series is available at multiple spatial resolutions (from 10 minutes (~340 km² at the equator) to 30 seconds (~1 km² at the equator)) and can be selected within the model interface. More information about each series can be found on the WorldClim website.</p>
+<p>While you can download the original datasets directly from WorldClim 2.1, they must first be converted to ASCII raster format before being used in NetLogo. To simplify this process, we recommend using the preprocessed datasets included in the model’s <a href="https://doi.org/10.17605/OSF.IO/RE95Z">OSF repository</a>. We have already converted the data for many countries and resolutions, making it easier to get started. These datasets can be reproduced by running the <a href="https://quarto.org/">Quarto</a> notebooks located in the model’s <code>qmd</code> folder.</p>
+<div id="fig-logoclim-interface-2" class="quarto-float quarto-figure quarto-figure-center anchored" data-label="fig-logoclim-interface-2">
+<figure class="quarto-float quarto-float-fig figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-logoclim-interface-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: LogoClim Graphical User Interface — United Kingdom (Spatial resolution: 30 arc-seconds, approximately 1 km² at the equator).
+</figcaption><div aria-describedby="fig-logoclim-interface-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/logoclim-interface-gbr-30s-hcd.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2: LogoClim Graphical User Interface — United Kingdom (Spatial resolution: 30 arc-seconds, approximately 1 km² at the equator)."><img src="images/logoclim-interface-gbr-30s-hcd.png" class="img-fluid figure-img" style="width:100.0%" data-label="fig-logoclim-interface-2"></a>
+</div>
+</figure>
+</div>
 </section><section id="acknowledgements" class="level1"><h1>Acknowledgements</h1>
 <!-- Acknowledgement of any financial support. -->
-<p>We gratefully acknowledge the contributions of <a href="https://orcid.org/0000-0002-3548-6966">Stephen E. Fick</a>, <a href="https://orcid.org/0000-0001-5872-2872">Robert J. Hijmans</a>, and the entire <a href="https://worldclim.org/">WorldClim</a> team for their dedication to developing and maintaining the WorldClim datasets.</p>
-<p>We also thank the World Climate Research Programme (<a href="https://www.wcrp-climate.org/">WCRP</a>), which, through its Working Group on Coupled Modelling, coordinated and promoted the Coupled Model Intercomparison Project Phase 6 (<a href="https://pcmdi.llnl.gov/CMIP6/">CMIP6</a>).</p>
+<p>We gratefully acknowledge the contributions of <a href="https://orcid.org/0000-0002-3548-6966">Stephen E. Fick</a>, <a href="https://orcid.org/0000-0001-5872-2872">Robert J. Hijmans</a>, and the entire <a href="https://worldclim.org/">WorldClim</a> team for their dedication to developing and maintaining the WorldClim datasets. We also thank the World Climate Research Programme (<a href="https://www.wcrp-climate.org/">WCRP</a>), which, through its Working Group on Coupled Modelling, coordinated and promoted the Coupled Model Intercomparison Project Phase 6 (<a href="https://pcmdi.llnl.gov/CMIP6/">CMIP6</a>).</p>
 <p>We acknowledge the climate modeling groups for producing and sharing their outputs; the Earth System Grid Federation (<a href="https://esgf.llnl.gov/">ESGF</a>) for archiving and facilitating access to the data; and the many funding agencies that support both CMIP6 and ESGF.</p>
-<p>Finally, we recognize the <a href="https://www.fsp.usp.br/sustentarea/">Sustentarea</a> Research and Extension Center at the University of São Paulo (<a href="https://www5.usp.br/">USP</a>) and the Conselho Nacional de Desenvolvimento Científico e Tecnológico (<a href="https://www.gov.br/cnpq/">CNPq</a>) for their support in the development of this project.</p>
+<p>Finally, we acknowledge the <a href="https://www.fsp.usp.br/sustentarea/">Sustentarea</a> Research and Extension Center at the University of São Paulo (<a href="https://www5.usp.br/">USP</a>), the Department of Science and Technology of the Secretariat of Science, Technology, and Innovation and of the Health Economic-Industrial Complex (<a href="https://www.gov.br/saude/pt-br/composicao/sectics">SECTICS</a>) of the <a href="https://www.gov.br/saude/en">Ministry of Health</a> of Brazil, and the National Council for Scientific and Technological Development (<a href="https://www.gov.br/cnpq/">CNPq</a>) (grant no. 444588/2023-0) for their support in the development of this project.</p>
 </section><section id="author-contributions" class="level1"><h1>Author contributions</h1>
 <p>The roles below were defined based on the Contributor Roles Taxonomy (<a href="https://credit.niso.org/">CRediT</a>).</p>
 <p><a href="https://orcid.org/0000-0001-7782-759X"><strong>Daniel Vartanian</strong></a>: Conceptualization, Methodology, Data curation, Software, Validation, Project administration, Writing – Review &amp; editing.</p>
-<p><a href="https://orcid.org/0000-0001-5947-2617"><strong>Leandro Martin Totaro Garcia</strong></a>: Validation, Writing – Review &amp; editing.</p>
-<p><a href="https://orcid.org/0000-0002-4900-5609"><strong>Aline Martins de Carvalho</strong></a>: Conceptualization, Funding acquisition, Validation, Project administration, Supervision, Writing – Review &amp; editing. <!-- %:::% paper end %:::% --></p>
+<p><a href="https://orcid.org/0000-0001-5947-2617"><strong>Leandro Garcia</strong></a>: Validation, Writing - Review &amp; editing.</p>
+<p><a href="https://orcid.org/0000-0002-4900-5609"><strong>Aline Martins de Carvalho</strong></a>: Conceptualization, Funding acquisition, Validation, Project administration, Supervision, Writing – Review &amp; editing.</p>
+</section><section id="additional-information" class="level1"><h1>Additional information</h1>
+<p><code>LogoClim</code> is an independent project with no affiliation to <a href="https://www.worldclim.org">WorldClim</a> or its developers. Users should be aware that WorldClim datasets are freely available for academic and other non-commercial use only. Any use of WorldClim data within <code>LogoClim</code> must comply with <a href="https://www.worldclim.org/about.html">WorldClim’s licensing terms</a>. <!-- %:::% paper end %:::% --></p>
 <div class="callout callout-style-simple callout-important">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -221,22 +275,28 @@ Figure&nbsp;1: LogoClim’s graphical user interface.
 </div>
 </div>
 </div>
-<section id="license" class="level2"><h2 class="anchored" data-anchor-id="license">License</h2>
-<p><a href="https://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/badge/License-MIT-10D810.svg" class="img-fluid" alt="License: MIT"></a> <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a></p>
-<p>The code in this paper is licensed under the <a href="https://opensource.org/license/mit/">MIT License</a>, while the document are available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-</section><section id="citation" class="level2"><h2 class="anchored" data-anchor-id="citation">Citation</h2>
+<section id="hot-to-cite" class="level2"><h2 class="anchored" data-anchor-id="hot-to-cite">Hot to cite</h2>
 <p>To cite this paper in publications please use the following format:</p>
-<p>Vartanian, D., Garcia, L. M. T., &amp; Carvalho, A. M. (2025). <em>LogoClim: WorldClim in NetLogo</em> [Report]. Sustentarea Research and Extension Group at the University of São Paulo. <a href="https://sustentarea.github.io/logoclim-article/" class="uri">https://sustentarea.github.io/logoclim-article/</a></p>
+<p>Vartanian, D., Garcia, L., &amp; Carvalho, A. M. (2025). <em>LogoClim: WorldClim in NetLogo</em> [Report]. Sustentarea Research and Extension Group at the University of São Paulo. <a href="https://sustentarea.github.io/logoclim-article" class="uri">https://sustentarea.github.io/logoclim-article</a></p>
 <p>A BibTeX entry for LaTeX users is</p>
-<pre><code>@techreport{vartanian2025,
-  title = {LogoClim: WorldClim in NetLogo},
-  author = {{Daniel Vartanian} and {Leandro Martin Totaro Garcia} and {Aline Martins de Carvalho}},
-  year = {2025},
-  address = {São Paulo},
-  institution = {Sustentarea Research and Extension Group at the University of São Paulo},
-  langid = {en},
-  url = {https://sustentarea.github.io/logoclim-article/}
-}</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>@techreport{vartanian2025,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  title = {LogoClim: WorldClim in NetLogo},</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  author = {{Daniel Vartanian} and {Leandro Garcia} and {Aline Martins de Carvalho}},</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  year = {2025},</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  address = {São Paulo},</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  institution = {Sustentarea Research and Extension Group at the University of São Paulo},</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  langid = {en},</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  url = {https://sustentarea.github.io/logoclim-article}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="license" class="level2"><h2 class="anchored" data-anchor-id="license">License</h2>
+<!-- badges: start -->
+<p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a> <!-- badges: end --></p>
+<p>This document is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. This means you can share and adapt the material for any purpose, even commercially, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made.</p>
+</section><section id="acknowledgements-1" class="level2"><h2 class="anchored" data-anchor-id="acknowledgements-1">Acknowledgements</h2>
+<p><a href="images/sustentarea-icon.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/sustentarea-icon.svg" class="img-fluid" style="width: 15%;"></a></p>
+<p>This work was developed with support from the <a href="https://www.fsp.usp.br/sustentarea">Sustentarea</a> Research and Extension Center at the University of São Paulo (<a href="https://www5.usp.br/">USP</a>).</p>
+<p><a href="images/cnpq-logo.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/cnpq-logo.svg" class="img-fluid" style="width: 25%;"></a></p>
+<p>This work was supported by the Department of Science and Technology of the Secretariat of Science, Technology, and Innovation and of the Health Economic-Industrial Complex (<a href="https://www.gov.br/saude/pt-br/composicao/sectics/">SECTICS</a>) of the <a href="https://www.gov.br/saude/pt-br/composicao/sectics/">Ministry of Health</a> of Brazil, and the National Council for Scientific and Technological Development (<a href="https://www.gov.br/cnpq/">CNPq</a>) (grant no. 444588/2023-0)</p>
 </section><section id="references" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-baker2016" class="csl-entry" role="listitem">
@@ -276,236 +336,242 @@ Ram, K., Boettiger, C., Chamberlain, S., Ross, N., Salmon, M., &amp; Butland, S.
 
 
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/sustentarea\.github\.io\/logoclim-article\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
+      return false;
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/sustentarea\.github\.io\/logoclim-article\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
         }
-        return container.innerHTML
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -513,185 +579,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sustentarea/logoclim-article/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sustentarea/logoclim-article/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/sustentarea/logoclim-article/issues/" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {

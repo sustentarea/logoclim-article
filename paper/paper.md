@@ -16,8 +16,10 @@ tags:
   - Future climate scenarios
   - Geospatial analysis
   - Historical climate data
+  - LevelSpace
   - Models
   - NetLogo
+  - Parallel execution
   - R (programming language)
   - Raster data
   - Reproducible research
@@ -34,7 +36,7 @@ authors:
     orcid: 0000-0001-7782-759X
     affiliation: 1
     corresponding: true
-  - given-names: Leandro Martin Totaro
+  - given-names: Leandro
     surname: Garcia
     orcid: 0000-0001-5947-2617
     affiliation: 2
@@ -50,7 +52,7 @@ affiliations:
   index: 2
 - name: School of Public Health, University of São Paulo, São Paulo, Brazil
   index: 3
-date: 15 April 2025
+date:  1 July 2025
 bibliography: paper.bib
 ---
 
@@ -61,40 +63,55 @@ bibliography: paper.bib
 
 <!-- A summary describing the high-level functionality and purpose of the software for a diverse, non-specialist audience. -->
 
-`LogoClim` is a [NetLogo](https://ccl.northwestern.edu/netlogo/) model designed to simulate and visualize climate conditions, serving as a powerful tool for exploring both historical and projected climate data. Its primary goal is to facilitate the integration of climate data into agent-based models (ABMs) and enhance the reproducibility of these simulations.
+`LogoClim` is a [NetLogo](https://ccl.northwestern.edu/netlogo/) model for simulating and visualizing global climate conditions. It allows researchers to integrate high-resolution climate data into agent-based models, supporting reproducible research in ecology, agriculture, environmental science, and other fields that rely on climate data integration.
 
-The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1960-2021) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways (SSPs, @oneill2017). All climate inputs are sourced from [WorldClim 2.1](https://worldclim.org/),  which provides high-resolution interpolated datasets derived from weather station records worldwide [@fick2017a].
+The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1951-2024) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways ([SSPs](https://climatedata.ca/resource/understanding-shared-socio-economic-pathways-ssps/), @oneill2017). All climate inputs come from [WorldClim 2.1](https://worldclim.org/), a widely used source of high-resolution, interpolated climate datasets based on weather station observations worldwide [@fick2017a], available for academic and other non-commercial use.
 
-`LogoClim` follows the FAIR Principles for Research Software (FAIR4RS) [@barker2022] and is openly available on the [CoMSES Network](https://www.comses.net/) and GitHub. @fig-logoclim-interface showcases the functionality of the model.
+`LogoClim` follows the FAIR Principles for Research Software ([FAIR4RS](https://fair-software.eu/); @barker2022) and is openly available on the [CoMSES Network](https://www.comses.net/) and [GitHub](https://github.com/sustentarea/logoclim). Figures -@fig-logoclim-interface-1 and -@fig-logoclim-interface-2 illustrate the model's interface and functionality.
 
-::: {#fig-logoclim-interface}
-![](images/logoclim-interface.png){label="fig-logoclim-interface" width=100%}
+::: {#fig-logoclim-interface-1}
+![](images/logoclim-interface-bra-10m-hmwd.png){label="fig-logoclim-interface-1" width=100%}
 
-LogoClim's graphical user interface.
+LogoClim Graphical User Interface — Brazil (Spatial resolution: 10 arc-seconds, approximately 340 km² at the equator).
 :::
+
 # Statement of need
 
 <!-- A Statement of need section that clearly illustrates the research purpose of the software and places it in the context of related work. -->
 
-The lack of reproducibility is a major concern in science [@baker2016], including in computational research [@peng2011]. This challenge is particularly relevant for agent-based models, which are widely used to simulate complex phenomena [@grimm2006a; @grimm2020]. One effective strategy to address this issue is the development of open, specialized tools that enhance transparency, standardization, and reusability among researchers [@ram2019; @barba2022]. This is why `LogoClim` was created.
+The lack of reproducibility is a major concern in science [@baker2016], including in computational research [@peng2011]. This challenge is particularly relevant for agent-based models, which are used to simulate complex phenomena [@grimm2006a; @grimm2020]. One effective strategy to address this issue is the development of open, specialized tools that enhance transparency and promote standardization, and reusability among researchers [@ram2019; @barba2022]. This is why `LogoClim` was created.
 
-The `LogoClim` model was developed for seamless integration with other models through NetLogo's LevelSpace (`ls`) extension [@hjorth2020], which enables parallel execution and data exchange between models. This integration capability makes it particularly valuable for agent-based simulations that incorporate climate data to study ecological, environmental, or social processes affected by climate conditions.
+The `LogoClim` model was developed for seamless integration with other models through NetLogo's LevelSpace extension [@hjorth2020], which enables parallel execution and data exchange between models. This integration capability makes it particularly valuable for agent-based simulations that incorporate climate data to study ecological, environmental, or social processes affected by climate conditions.
+
+# Motivation
 
 <!-- Mention (if applicable) a representative set of past or ongoing research projects using the software and recent scholarly publications enabled by it. -->
 
-The model was created as part of a project of the [Sustentarea](https://www.fsp.usp.br/sustentarea/) Research and Extension Center, which aims to evaluate the impact of climate change on the health and nutrition of Brazilian children under five years old [@carvalho2023a]. `LogoClim` functions as a submodel for an ABM designed to help researchers, policymakers, and practitioners better understand the potential consequences of climate change on this vulnerable population.
+The model was originally developed as part of a project by the [Sustentarea](https://www.fsp.usp.br/sustentarea/) Research and Extension Center, aimed at evaluating the impact of climate change on the health and nutrition of Brazilian children under five years old [@carvalho2023a]. During development, however, we recognized that the model had broader potential beyond the scope of our initial study. `LogoClim` can now be used as a submodel within agent-based models designed to help researchers, policymakers, and practitioners explore the potential impacts of climate change across different contexts and geographical areas.
+
+# How it works
+
+`LogoClim` operates on a grid of patches, where each patch represents a geographical area and stores values for latitude, longitude, and selected climate variables. During the simulation, patches update their colors based on the data values. The results can be visualized on a map, accompanied by plots that display the mean, minimum, maximum, and standard deviation of the selected variable over time.
+
+In addition to latitude and longitude data points, `LogoClim` supports simulation with all three climate data series provided by [WorldClim 2.1](https://worldclim.org/): long-term historical climate averages (1970-2000), historical monthly weather (1951-2024), and future climate projections (2021-2100). Each series is available at multiple spatial resolutions (from 10 minutes (~340 km² at the equator) to 30 seconds (~1 km² at the equator)) and can be selected within the model interface. More information about each series can be found on the WorldClim website.
+
+While you can download the original datasets directly from WorldClim 2.1, they must first be converted to ASCII raster format before being used in NetLogo. To simplify this process, we recommend using the preprocessed datasets included in the model's [OSF repository](https://doi.org/10.17605/OSF.IO/RE95Z). We have already converted the data for many countries and resolutions, making it easier to get started. These datasets can be reproduced by running the [Quarto](https://quarto.org/) notebooks located in the model's `qmd` folder.
+
+::: {#fig-logoclim-interface-2}
+![](images/logoclim-interface-gbr-30s-hcd.png){label="fig-logoclim-interface-2" width=100%}
+
+LogoClim Graphical User Interface — United Kingdom (Spatial resolution: 30 arc-seconds, approximately 1 km² at the equator).
+:::
 
 # Acknowledgements
 
 <!-- Acknowledgement of any financial support. -->
 
-We gratefully acknowledge the contributions of [Stephen E. Fick](https://orcid.org/0000-0002-3548-6966), [Robert J. Hijmans](https://orcid.org/0000-0001-5872-2872), and the entire [WorldClim](https://worldclim.org/) team for their dedication to developing and maintaining the WorldClim datasets.
-
-We also thank the World Climate Research Programme ([WCRP](https://www.wcrp-climate.org/)), which, through its Working Group on Coupled Modelling, coordinated and promoted the Coupled Model Intercomparison Project Phase 6 ([CMIP6](https://pcmdi.llnl.gov/CMIP6/)).
+We gratefully acknowledge the contributions of [Stephen E. Fick](https://orcid.org/0000-0002-3548-6966), [Robert J. Hijmans](https://orcid.org/0000-0001-5872-2872), and the entire [WorldClim](https://worldclim.org/) team for their dedication to developing and maintaining the WorldClim datasets. We also thank the World Climate Research Programme ([WCRP](https://www.wcrp-climate.org/)), which, through its Working Group on Coupled Modelling, coordinated and promoted the Coupled Model Intercomparison Project Phase 6 ([CMIP6](https://pcmdi.llnl.gov/CMIP6/)).
 
 We acknowledge the climate modeling groups for producing and sharing their outputs; the Earth System Grid Federation ([ESGF](https://esgf.llnl.gov/)) for archiving and facilitating access to the data; and the many funding agencies that support both CMIP6 and ESGF.
 
-Finally, we recognize the [Sustentarea](https://www.fsp.usp.br/sustentarea/) Research and Extension Center at the University of São Paulo ([USP](https://www5.usp.br/)) and the Conselho Nacional de Desenvolvimento Científico e Tecnológico ([CNPq](https://www.gov.br/cnpq/)) for their support in the development of this project.
+Finally, we acknowledge the [Sustentarea](https://www.fsp.usp.br/sustentarea/) Research and Extension Center at the University of São Paulo ([USP](https://www5.usp.br/)), the Department of Science and Technology of the Secretariat of Science, Technology, and Innovation and of the Health Economic-Industrial Complex ([SECTICS](https://www.gov.br/saude/pt-br/composicao/sectics)) of the [Ministry of Health](https://www.gov.br/saude/en) of Brazil, and the National Council for Scientific and Technological Development ([CNPq](https://www.gov.br/cnpq/)) (grant no. 444588/2023-0) for their support in the development of this project.
 
 # Author contributions
 
@@ -102,9 +119,13 @@ The roles below were defined based on the Contributor Roles Taxonomy ([CRediT](h
 
 [**Daniel Vartanian**](https://orcid.org/0000-0001-7782-759X): Conceptualization, Methodology, Data curation, Software, Validation, Project administration, Writing – Review & editing.
 
-[**Leandro Martin Totaro Garcia**](https://orcid.org/0000-0001-5947-2617): Validation, Writing – Review & editing.
+[**Leandro Garcia**](https://orcid.org/0000-0001-5947-2617): Validation, Writing - Review & editing.
 
 [**Aline Martins de Carvalho**](https://orcid.org/0000-0002-4900-5609): Conceptualization, Funding acquisition, Validation, Project administration, Supervision, Writing – Review & editing.
+
+# Additional information
+
+`LogoClim` is an independent project with no affiliation to [WorldClim](https://www.worldclim.org) or its developers. Users should be aware that WorldClim datasets are freely available for academic and other non-commercial use only. Any use of WorldClim data within `LogoClim` must comply with [WorldClim's licensing terms](https://www.worldclim.org/about.html).
 <!-- %:::% paper end %:::% -->
 
 # References
