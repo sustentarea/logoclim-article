@@ -62,9 +62,9 @@ bibliography: paper.bib
 
 The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1951-2024) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways ([SSPs](https://climatedata.ca/resource/understanding-shared-socio-economic-pathways-ssps/)) [@oneill2017]. All climate inputs come from [WorldClim 2.1](https://worldclim.org/), a widely used source of high-resolution, interpolated climate datasets based on weather station observations worldwide [@fick2017a], available for academic and other non-commercial use.
 
-`LogoClim` follows the FAIR Principles for Research Software ([FAIR4RS](https://fair-software.eu/)) [@barker2022] and is openly available on the [CoMSES Network](https://www.comses.net/codebases/bccd451f-76a4-408a-85fd-c5024359ba9a/) and [GitHub](https://github.com/sustentarea/logoclim). @fig-logoclim-interface-1 and @fig-logoclim-interface-2 illustrate the model's interface and functionality.
+`LogoClim` follows the FAIR Principles for Research Software ([FAIR4RS](https://fair-software.eu/)) [@barker2022] and is openly available on the [CoMSES Network](https://www.comses.net/codebases/bccd451f-76a4-408a-85fd-c5024359ba9a/) and [GitHub](https://github.com/sustentarea/logoclim). \autoref{fig:logoclim-interface-1} and \autoref{fig:logoclim-interface-2} illustrate the model's interface and functionality.
 
-![LogoClim Graphical User Interface — Brazil (Spatial resolution: 10 arc-seconds, approximately 340 km² at the equator).\label{fig:logoclim-interface-1}](images/logoclim-interface-bra-10m-hmwd.png){width=100%}
+![LogoClim Graphical User Interface — Brazil.\label{fig:logoclim-interface-1}](images/logoclim-interface-bra-10m-hmwd.png){width=100%}
 
 # Statement of need
 
@@ -86,7 +86,7 @@ Original datasets can be downloaded directly from [WorldClim 2.1](https://worldc
 
 For quick testing, example datasets are available in the model's [OSF repository](https://doi.org/10.17605/OSF.IO/RE95Z). These files are pre-converted to ASCII format and ready for use with `LogoClim`. Please note that these datasets are intended for demonstration and testing only, and should not be used for research or analysis.
 
-![LogoClim Graphical User Interface — United Kingdom (Spatial resolution: 30 arc-seconds, approximately 1 km² at the equator).\label{fig:logoclim-interface-2}](images/logoclim-interface-gbr-30s-hcd.png){width=100%}
+![LogoClim Graphical User Interface — United Kingdom.\label{fig:logoclim-interface-2}](images/logoclim-interface-gbr-30s-hcd.png){width=100%}
 
 # Acknowledgements
 
@@ -96,19 +96,17 @@ We thank the [Climatic Research Unit](https://www.uea.ac.uk/groups-and-centres/c
 
 We also acknowledge the World Climate Research Programme ([WCRP](https://www.wcrp-climate.org/)), its Working Group on Coupled Modelling, and the Coupled Model Intercomparison Project Phase 6 ([CMIP6](https://pcmdi.llnl.gov/CMIP6/)) for coordinating and advancing global climate model development.
 
-We are grateful to the climate modeling groups for producing and sharing their model outputs, the Earth System Grid Federation ([ESGF](https://esgf.llnl.gov/)) for archiving and providing access to the data, and the many funding agencies that support CMIP6 and ESGF.
-
 Finally, we acknowledge the [Sustentarea](https://www.fsp.usp.br/sustentarea/) Research and Extension Center at the University of São Paulo ([USP](https://www5.usp.br/)), the Department of Science and Technology of the Secretariat of Science, Technology, and Innovation and of the Health Economic-Industrial Complex ([SECTICS](https://www.gov.br/saude/pt-br/composicao/sectics)) of the [Ministry of Health](https://www.gov.br/saude/en) of Brazil, and the National Council for Scientific and Technological Development ([CNPq](https://www.gov.br/cnpq/)) (grant no. 444588/2023-0) for their support in the development of this project.
 
 # Author contributions
 
 The roles below were defined based on the Contributor Roles Taxonomy ([CRediT](https://credit.niso.org/)).
 
-[**Daniel Vartanian**](https://orcid.org/0000-0001-7782-759X): Conceptualization, Methodology, Data curation, Software, Validation, Project administration, Writing – Review & editing.
+[**Daniel Vartanian**](https://orcid.org/0000-0001-7782-759X): Conceptualization, Data curation, Methodology, Project administration, Software, Validation, Writing – Review & editing.
 
 [**Leandro Garcia**](https://orcid.org/0000-0001-5947-2617): Validation, Writing - Review & editing.
 
-[**Aline Martins de Carvalho**](https://orcid.org/0000-0002-4900-5609): Conceptualization, Funding acquisition, Validation, Project administration, Supervision, Writing – Review & editing.
+[**Aline Martins de Carvalho**](https://orcid.org/0000-0002-4900-5609): Conceptualization, Funding acquisition, Project administration, Supervision, Validation, Writing – Review & editing.
 
 # Additional information
 
