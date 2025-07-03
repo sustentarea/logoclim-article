@@ -25,7 +25,7 @@ The paper starts here.
 
 The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1951-2024) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways ([SSPs](https://climatedata.ca/resource/understanding-shared-socio-economic-pathways-ssps/)) [@oneill2017]. All climate inputs come from [WorldClim 2.1](https://worldclim.org/), a widely used source of high-resolution, interpolated climate datasets based on weather station observations worldwide [@fick2017a], available for academic and other non-commercial use.
 
-`LogoClim` follows the FAIR Principles for Research Software ([FAIR4RS](https://fair-software.eu/)) [@barker2022] and is openly available on the [CoMSES Network](https://www.comses.net/codebases/bccd451f-76a4-408a-85fd-c5024359ba9a/) and [GitHub](https://github.com/sustentarea/logoclim). @fig-logoclim-interface-1 and @fig-logoclim-interface-2 illustrate the model's interface and functionality.
+`LogoClim` follows the FAIR Principles for Research Software [@barker2022] and is openly available on the [CoMSES Network](https://www.comses.net/codebases/bccd451f-76a4-408a-85fd-c5024359ba9a/) and [GitHub](https://github.com/sustentarea/logoclim). @fig-logoclim-interface-1 and @fig-logoclim-interface-2 illustrate the model's interface and functionality.
 
 ::: {#fig-logoclim-interface-1}
 ![](images/logoclim-interface-bra-10m-hmwd.png){label="fig-logoclim-interface-1" width=100%}
@@ -49,9 +49,9 @@ The model was originally developed as part of a project by the [Sustentarea](htt
 
 The model supports all three climate data series from [WorldClim 2.1](https://worldclim.org/): long-term historical climate averages (1970–2000), historical monthly weather (1951–2024), and future climate projections (2021–2100). Each series is available at multiple spatial resolutions (from 10 minutes (~340 km² at the equator) to 30 seconds (~1 km² at the equator)), which can be selected within the model interface. Further details about each series are available on the WorldClim website.
 
-Original datasets can be downloaded directly from [WorldClim 2.1](https://worldclim.org/), but must be converted to ASCII format for use in NetLogo. To streamline this process, we provide [Quarto](https://quarto.org/) notebooks containing reproducible pipelines and all necessary commands to download and process the data. These notebooks can be easily adapted for specific requirements.
+The datasets are available for download from [WorldClim 2.1](https://worldclim.org/), but must be converted to ASCII format for compatibility with NetLogo. To simplify this workflow, we provide [Quarto](https://quarto.org/) notebooks with reproducible pipelines for downloading and processing the data. These notebooks can be customized to meet specific research needs.
 
-For quick testing, example datasets are available in the model's [OSF repository](https://doi.org/10.17605/OSF.IO/RE95Z). These files are pre-converted to ASCII format and ready for use with `LogoClim`. Please note that these datasets are intended for demonstration and testing only, and should not be used for research or analysis.
+We also provide example datasets for testing and demonstration. These files are available in the model's [OSF repository](https://doi.org/10.17605/OSF.IO/RE95Z) and are ready to use with `LogoClim`.
 
 ::: {#fig-logoclim-interface-2}
 ![](images/logoclim-interface-gbr-30s-hcd.png){label="fig-logoclim-interface-2" width=100%}
