@@ -34,7 +34,6 @@ authors:
     surname: Vartanian
     orcid: 0000-0001-7782-759X
     affiliation: 1
-    corresponding: true
   - given-names: Leandro
     surname: Garcia
     orcid: 0000-0001-5947-2617
@@ -44,6 +43,7 @@ authors:
     surname: Carvalho
     orcid: 0000-0002-4900-5609
     affiliation: 3
+    corresponding: true
 affiliations:
 - name: School of Arts, Sciences, and Humanities, University of São Paulo, São Paulo, Brazil
   index: 1
