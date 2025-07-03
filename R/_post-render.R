@@ -135,8 +135,7 @@ data |> readr::write_lines(here::here("paper", "paper.md"))
 
 cli::cli_alert_warning(
   paste0(
-    "Fix figures and figure references in {.strong paper/paper.md} ",
-    "and remove the comment tags. ",
+    "Fix figures and figure references in {.strong paper/paper.md}. ",
     "See {.url https://joss.readthedocs.io/en/latest/example_paper.html} ",
     "for more information."
   )

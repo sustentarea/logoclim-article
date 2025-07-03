@@ -7,11 +7,11 @@
     "text": "Overview\nThis document is a mirror of a paper prepared for the Journal of Open Source Software (JOSS), describing the LogoClim model. The final version is available in the paper folder.\n\n\n\n\n\n\nThe paper starts here."
   },
   {
-    "objectID": "index.html#hot-to-cite",
-    "href": "index.html#hot-to-cite",
+    "objectID": "index.html#how-to-cite",
+    "href": "index.html#how-to-cite",
     "title": "LogoClim: WorldClim in NetLogo",
-    "section": "Hot to cite",
-    "text": "Hot to cite\nTo cite this paper in publications please use the following format:\nVartanian, D., Garcia, L., & Carvalho, A. M. (2025). LogoClim: WorldClim in NetLogo [Report]. Sustentarea Research and Extension Group at the University of São Paulo. https://sustentarea.github.io/logoclim-article\nA BibTeX entry for LaTeX users is\n@techreport{vartanian2025,\n  title = {LogoClim: WorldClim in NetLogo},\n  author = {{Daniel Vartanian} and {Leandro Garcia} and {Aline Martins de Carvalho}},\n  year = {2025},\n  address = {São Paulo},\n  institution = {Sustentarea Research and Extension Group at the University of São Paulo},\n  langid = {en},\n  url = {https://sustentarea.github.io/logoclim-article}\n}"
+    "section": "How to cite",
+    "text": "How to cite\nTo cite this paper in publications please use the following format:\nVartanian, D., Garcia, L., & Carvalho, A. M. (2025). LogoClim: WorldClim in NetLogo [Report]. Sustentarea Research and Extension Group at the University of São Paulo. https://sustentarea.github.io/logoclim-article\nA BibTeX entry for LaTeX users is\n@techreport{vartanian2025,\n  title = {LogoClim: WorldClim in NetLogo},\n  author = {{Daniel Vartanian} and {Leandro Garcia} and {Aline Martins de Carvalho}},\n  year = {2025},\n  address = {São Paulo},\n  institution = {Sustentarea Research and Extension Group at the University of São Paulo},\n  langid = {en},\n  url = {https://sustentarea.github.io/logoclim-article}\n}"
   },
   {
     "objectID": "index.html#license",

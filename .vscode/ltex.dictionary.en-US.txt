@@ -16,3 +16,4 @@ Vartanian
 langid
 @techreport
 NetLogo
+autoref
