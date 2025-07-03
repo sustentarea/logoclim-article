@@ -51,7 +51,7 @@ affiliations:
   index: 2
 - name: School of Public Health, University of São Paulo, São Paulo, Brazil
   index: 3
-date:  2 July 2025
+date:  3 July 2025
 bibliography: paper.bib
 ---
 
