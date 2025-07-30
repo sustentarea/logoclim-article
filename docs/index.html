@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.32">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Daniel Vartanian, Leandro Garcia, &amp; Aline M. de Carvalho">
-<meta name="dcterms.date" content="2025-07-03">
+<meta name="dcterms.date" content="2025-07-29">
 <title>LogoClim: WorldClim in NetLogo</title>
 <style>
 code{white-space: pre-wrap;}
@@ -86,10 +86,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-6fd01158ae724d1690efadd2da0cc0f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bd1cbf55dbcebeb55868b6defe49ed7b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bfbe867771e8028dbbc8a6959ba600d2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9a409717638d56c488cf53e57e0a5d0b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -116,10 +116,10 @@ div.csl-indent {
 <meta property="og:image:width" content="2400">
 <meta name="citation_title" content="LogoClim: WorldClim in NetLogo">
 <meta name="citation_author" content="Daniel Vartanian, Leandro Garcia, &amp;amp; Aline M. de Carvalho">
-<meta name="citation_publication_date" content="2025-07-03">
-<meta name="citation_cover_date" content="2025-07-03">
+<meta name="citation_publication_date" content="2025-07-29">
+<meta name="citation_cover_date" content="2025-07-29">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-07-03">
+<meta name="citation_online_date" content="2025-07-29">
 <meta name="citation_fulltext_html_url" content="https://sustentarea.github.io/logoclim-article/">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=1,500 scientists lift the lid on reproducibility;,citation_abstract=Survey sheds light on the &amp;amp;amp;quot;crisis&amp;quot; rocking research.;,citation_author=Monya Baker;,citation_publication_date=2016-05-01;,citation_cover_date=2016-05-01;,citation_year=2016;,citation_fulltext_html_url=https://www.nature.com/articles/533452a;,citation_issue=7604;,citation_doi=10.1038/533452a;,citation_issn=1476-4687;,citation_volume=533;,citation_language=en-US;,citation_journal_title=Nature;,citation_publisher=Nature Publishing Group;">
@@ -197,7 +197,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2025-07-03</p>
+      <p class="date">2025-07-29</p>
     </div>
   </div>
   
@@ -206,7 +206,7 @@ div.csl-indent {
   
 
 
-</header><!-- badges: start --><p><a href="https://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/badge/license-MIT-green.svg" class="img-fluid" alt="License: MIT"></a> <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a> <!-- badges: end --></p>
+</header><!-- badges: start --><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a> <!-- badges: end --></p>
 <section id="overview" class="level2"><h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>This document is a mirror of a paper prepared for the <em>Journal of Open Source Software</em> (<a href="https://joss.theoj.org/">JOSS</a>), describing the <a href="https://github.com/sustentarea/logoclim"><code>LogoClim</code></a> model. The final version is available in the <code>paper</code> folder.</p>
 <div class="callout callout-style-simple callout-important">
@@ -221,7 +221,7 @@ div.csl-indent {
 </div>
 <!-- %:::% paper begin %:::% -->
 </section><section id="summary" class="level1"><h1>Summary</h1>
-<p><code>LogoClim</code> is a <a href="https://ccl.northwestern.edu/netlogo/">NetLogo</a> model for simulating and visualizing global climate conditions. It allows researchers to integrate high-resolution climate data into agent-based models, supporting reproducible research in ecology, agriculture, environmental science, and other fields that rely on climate data integration.</p>
+<p><code>LogoClim</code> is a <a href="https://www.netlogo.org">NetLogo</a> model for simulating and visualizing global climate conditions. It allows researchers to integrate high-resolution climate data into agent-based models, supporting reproducible research in ecology, agriculture, environmental science, and other fields that rely on climate data integration.</p>
 <p>The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1951-2024) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways (<a href="https://climatedata.ca/resource/understanding-shared-socio-economic-pathways-ssps/">SSPs</a>) <span class="citation" data-cites="oneill2017">(<a href="#ref-oneill2017" role="doc-biblioref">O’Neill et al., 2017</a>)</span>. All climate inputs come from <a href="https://worldclim.org/">WorldClim 2.1</a>, a widely used source of high-resolution, interpolated climate datasets based on weather station observations worldwide <span class="citation" data-cites="fick2017a">(<a href="#ref-fick2017a" role="doc-biblioref">Fick &amp; Hijmans, 2017</a>)</span>, available for academic and other non-commercial use.</p>
 <p><code>LogoClim</code> follows the FAIR Principles for Research Software <span class="citation" data-cites="barker2022">(<a href="#ref-barker2022" role="doc-biblioref">Barker et al., 2022</a>)</span> and is openly available on the <a href="https://www.comses.net/codebases/bccd451f-76a4-408a-85fd-c5024359ba9a/">CoMSES Network</a> and <a href="https://github.com/sustentarea/logoclim">GitHub</a>. <a href="#fig-logoclim-interface-1" class="quarto-xref">Figure&nbsp;1</a> and <a href="#fig-logoclim-interface-2" class="quarto-xref">Figure&nbsp;2</a> illustrate the model’s interface and functionality.</p>
 <div id="fig-logoclim-interface-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-label="fig-logoclim-interface-1">

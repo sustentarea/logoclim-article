@@ -13,14 +13,14 @@ project:
 title: "LogoClim: WorldClim in NetLogo"
 author: "Daniel Vartanian, Leandro Garcia, & Aline M. de Carvalho"
 keyword: >
-  Agent-based modeling, Climate change, Climate data visualization,
-  Climate model integration, Climate projections, Climate simulation,
-  CMIP6, Complex systems, Complexity science, Data interoperability,
-  Environmental sciences, Environmental simulation, Future climate scenarios,
-  Geospatial analysis, Historical climate data, Models, NetLogo,
-  Parallel execution, R (programming language), Raster data,
-  Reproducible research, Shared socioeconomic pathways, Simulations,
-  Spatial analysis, Spatial resolution, SSPs, Time series, WorldClim
+  Agent-Based Modeling, Climate Change, Climate Data Visualization,
+  Climate Model Integration, Climate Projections, Climate Simulation,
+  CMIP6, Complex Systems, Complexity Science, Data Interoperability,
+  Environmental Sciences, Environmental Simulation, Future Climate Scenarios,
+  Geospatial Analysis, Historical Climate Data, Models, NetLogo,
+  Parallel Execution, R (Programming Language), Raster Data,
+  Reproducible Research, Shared Socioeconomic Pathways, Simulations,
+  Spatial Analysis, Spatial Resolution, SSSPs, Time Series, Worldclim
 date: today
 date-format: "YYYY-MM-DD"
 

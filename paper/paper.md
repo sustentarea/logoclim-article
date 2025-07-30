@@ -1,34 +1,34 @@
 ---
 title: "LogoClim: WorldClim in NetLogo"
 tags:
-  - Agent-based modeling
-  - Climate change
-  - Climate data visualization
-  - Climate model integration
-  - Climate projections
-  - Climate simulation
+  - Agent-Based Modeling
+  - Climate Change
+  - Climate Data Visualization
+  - Climate Model Integration
+  - Climate Projections
+  - Climate Simulation
   - CMIP6
-  - Complex systems
-  - Complexity science
-  - Data interoperability
-  - Environmental sciences
-  - Environmental simulation
-  - Future climate scenarios
-  - Geospatial analysis
-  - Historical climate data
+  - Complex Systems
+  - Complexity Science
+  - Data Interoperability
+  - Environmental Sciences
+  - Environmental Simulation
+  - Future Climate Scenarios
+  - Geospatial Analysis
+  - Historical Climate Data
   - LevelSpace
   - Models
   - NetLogo
-  - Parallel execution
-  - Raster data
-  - Reproducible research
-  - Shared socioeconomic pathways
+  - Parallel Execution
+  - Raster Data
+  - Reproducible Research
+  - Shared Socioeconomic Pathways
   - Simulations
-  - Spatial analysis
-  - Spatial resolution
+  - Spatial Analysis
+  - Spatial Resolution
   - SSPs
-  - Time series
-  - WorldClim
+  - Time Series
+  - Worldclim
 authors:
   - given-names: Daniel
     surname: Vartanian
@@ -51,14 +51,14 @@ affiliations:
   index: 2
 - name: School of Public Health, University of São Paulo, São Paulo, Brazil
   index: 3
-date:  3 July 2025
+date: 29 July 2025
 bibliography: paper.bib
 ---
 
 <!-- %:::% paper begin %:::% -->
 # Summary
 
-`LogoClim` is a [NetLogo](https://ccl.northwestern.edu/netlogo/) model for simulating and visualizing global climate conditions. It allows researchers to integrate high-resolution climate data into agent-based models, supporting reproducible research in ecology, agriculture, environmental science, and other fields that rely on climate data integration.
+`LogoClim` is a [NetLogo](https://www.netlogo.org) model for simulating and visualizing global climate conditions. It allows researchers to integrate high-resolution climate data into agent-based models, supporting reproducible research in ecology, agriculture, environmental science, and other fields that rely on climate data integration.
 
 The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1951-2024) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways ([SSPs](https://climatedata.ca/resource/understanding-shared-socio-economic-pathways-ssps/)) [@oneill2017]. All climate inputs come from [WorldClim 2.1](https://worldclim.org/), a widely used source of high-resolution, interpolated climate datasets based on weather station observations worldwide [@fick2017a], available for academic and other non-commercial use.
 

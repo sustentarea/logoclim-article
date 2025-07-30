@@ -8,7 +8,7 @@
 
 ## Overview
 
-This repository contains the files associated with the `LogoClim` model article, intended for submission to the *Journal of Open Source Software* ([JOSS](https://joss.theoj.org/)).
+This repository contains the files associated with the [`LogoClim`](https://github.com/sustentarea/logoclim/) model article, intended for submission to the *Journal of Open Source Software* ([JOSS](https://joss.theoj.org/)).
 
 ## How to Cite
 
@@ -35,7 +35,7 @@ A BibTeX entry for LaTeX users is
 [![License: GPLv3](https://img.shields.io/badge/license-GPL--3-bd0000.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-The code in this repository is licensed under the [GPLv3(https://www.gnu.org/licenses/gpl-3.0), while the documents are available under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+The code in this repository is licensed under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0), while the documents are available under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 ```text
 Copyright (C) 2025 Daniel Vartanian
