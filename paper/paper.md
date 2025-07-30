@@ -66,6 +66,8 @@ The model utilizes raster data to represent climate variables such as temperatur
 
 ![LogoClim Graphical User Interface — Brazil.\label{fig:logoclim-interface-1}](images/logoclim-interface-bra-10m-hmwd.png){width=100%}
 
+\newpage
+
 # Statement of need
 
 The lack of reproducibility is a major concern in science [@baker2016], including in computational research [@peng2011]. This challenge is particularly relevant for agent-based models, which are used to simulate complex phenomena [@grimm2006a; @grimm2020]. One effective strategy to address this issue is the development of open, specialized tools that enhance transparency and promote standardization, and reusability among researchers [@ram2019; @barba2022]. This is why `LogoClim` was created.
