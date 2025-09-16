@@ -1,5 +1,5 @@
 ---
-title: "LogoClim: WorldClim in NetLogo"
+title: "{LogoClim}: WorldClim in NetLogo"
 tags:
   - Agent-Based Modeling
   - Climate Change
@@ -59,17 +59,11 @@ bibliography: paper.bib
 
 The model utilizes raster data to represent climate variables such as temperature and precipitation over time. It incorporates historical data (1951-2024) and future climate projections (2021-2100) derived from global climate models under various Shared Socioeconomic Pathways ([SSPs](https://climatedata.ca/resource/understanding-shared-socio-economic-pathways-ssps/)) [@oneill2017]. All climate inputs come from [WorldClim 2.1](https://worldclim.org/), a widely used source of high-resolution, interpolated climate datasets based on weather station observations worldwide [@fick2017], available for academic and other non-commercial use.
 
-`LogoClim` follows the FAIR Principles for Research Software [@barker2022] and is openly available on the [CoMSES Network](https://www.comses.net/codebases/bccd451f-76a4-408a-85fd-c5024359ba9a/) and [GitHub](https://github.com/sustentarea/logoclim). @fig-logoclim-interface-1 and @fig-logoclim-interface-2 illustrate the model's interface and functionality. See the [`Logônia`](https://github.com/sustentarea/logonia) model [@vartanian2025g] for an example of its integration into a full NetLogo simulation.
+`LogoClim` follows the FAIR Principles for Research Software [@barker2022] and is openly available on the [CoMSES Network](https://www.comses.net/codebases/bccd451f-76a4-408a-85fd-c5024359ba9a/) and [GitHub](https://github.com/sustentarea/logoclim).\autoref{fig:logoclim-interface-1} and \autoref{fig:logoclim-interface-2} illustrate the model's interface and functionality. See the [`Logônia`](https://github.com/sustentarea/logonia) model [@vartanian2025g] for an example of its integration into a full NetLogo simulation.
 
-::: {#fig-logoclim-interface-1}
-![](images/logoclim-interface-bra-10m-hmwd.png){label="fig-logoclim-interface-1" width=100%}
+![LogoClim Graphical User Interface — Brazil.\label{fig:logoclim-interface-1}](images/logoclim-interface-bra-10m-hmwd.png){width=100%}
 
-LogoClim Graphical User Interface — Brazil.
-:::
-
-:::{=latex}
 \newpage
-:::
 
 # Statement of need
 
@@ -93,11 +87,7 @@ The datasets are available for download from [WorldClim 2.1](https://worldclim.o
 
 We also provide example datasets for testing and demonstration. These files are available in the model's [OSF repository](https://doi.org/10.17605/OSF.IO/RE95Z) and are ready to use with `LogoClim`. To illustrate how `LogoClim` can be used in practice, we also developed the [`Logônia`](https://github.com/sustentarea/logonia) model [@vartanian2025g], which showcases its integration into a full NetLogo simulation.
 
-::: {#fig-logoclim-interface-2}
-![](images/logoclim-interface-gbr-30s-hcd.png){label="fig-logoclim-interface-2" width=100%}
-
-LogoClim Graphical User Interface — United Kingdom.
-:::
+![LogoClim Graphical User Interface — United Kingdom.\label{fig:logoclim-interface-2}](images/logoclim-interface-gbr-30s-hcd.png){width=100%}
 
 # Acknowledgements
 
