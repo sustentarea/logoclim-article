@@ -1,3 +1,9 @@
+/*_cache/
+/.quarto/
+/.Rproj.user/
+/_freeze/
+/cache/
+
 *.knit.md
 *.utf8.md
 .Rapp.history
@@ -5,8 +11,3 @@
 .Renviron
 .Rhistory
 .Ruserdata
-/*_cache/
-/.quarto/
-/.Rproj.user/
-/_freeze/
-/cache/

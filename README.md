@@ -14,7 +14,7 @@ This repository contains the files associated with the [`LogoClim`](https://gith
 
 To cite this work, please use the following format:
 
-Vartanian, D., Garcia, L., & Carvalho, A. M. (2025). *LogoClim: WorldClim in NetLogo* \[Report\]. Sustentarea Research and Extension Group at the University of São Paulo. <https://sustentarea.github.io/logoclim-article>
+Vartanian, D., Garcia, L., & Carvalho, A. M. (2025). *LogoClim: WorldClim in NetLogo* \[Report\]. Sustentarea Research and Extension Group at the University of São Paulo. https://sustentarea.github.io/logoclim-article
 
 A BibTeX entry for LaTeX users is
 

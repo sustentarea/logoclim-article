@@ -1,20 +1,20 @@
-# library(beepr)
-# library(checkmate)
-# library(fs)
-# library(here)
-# library(lubridate)
-# library(quartor) # github.com/danielvartan/quartor
-# library(readr)
-# library(stringr)
+library(beepr)
+library(checkmate)
+library(cli)
+library(fs)
+library(here)
+library(quartor) # github.com/danielvartan/quartor
+library(readr)
+library(stringr)
 
-# Replace special characters -----
+# Replace Special Characters -----
 
 files <- c(
-  here::here("README.md"),
-  here::here("index.qmd"),
-  here::here("paper", "paper.md"),
-  here::here("references.bib"),
-  here::here("paper", "paper.bib")
+  here("README.md"),
+  here("index.qmd"),
+  here("paper", "paper.md"),
+  here("references.bib"),
+  here("paper", "paper.bib")
 )
 
 special_characters <- list(
@@ -26,48 +26,30 @@ for (i in files) {
   for (j in special_characters) {
     data <-
       i |>
-      readr::read_lines() |>
-      stringr::str_replace_all(
+      read_lines() |>
+      str_replace_all(
         pattern = j[1],
         replacement = j[2]
       )
 
-    data |> readr::write_lines(i)
-  }
-}
-
-# Remove `file` field from `.bib` files -----
-
-files <- c(
-  here::here("references.bib"),
-  here::here("paper", "paper.bib")
-)
-
-for (i in files) {
-  for (j in special_characters) {
-    data <-
-      i |>
-      readr::read_lines() |>
-      stringr::str_subset("^  file = |^file = ", negate = TRUE)
-
-    data |> readr::write_lines(i)
+    data |> write_lines(i)
   }
 }
 
 # Create/Update JOSS Paper -----
 
-if (!checkmate::test_directory_exists(here::here("paper"))) {
-  fs::dir_create(here::here("paper"))
+if (!test_directory_exists(here("paper"))) {
+  dir_create(here("paper"))
 }
 
-if (!checkmate::test_file_exists(here::here("paper", "paper.md"))) {
-  fs::file_create(here::here("paper", "paper.md"))
+if (!test_file_exists(here("paper", "paper.md"))) {
+  file_create(here("paper", "paper.md"))
 }
 
 swap_list <- list(
   paper = list(
-    from = here::here("index.qmd"),
-    to = here::here("paper", "paper.md"),
+    from = here("index.qmd"),
+    to = here("paper", "paper.md"),
     begin_tag = "%:::% paper begin %:::%",
     end_tag = "%:::% paper end %:::%",
     value = NULL,
@@ -87,39 +69,39 @@ for (i in swap_list) {
   )
 }
 
-if (checkmate::test_directory_exists(here::here("docs"))) {
-  if (checkmate::test_directory_exists(here::here("paper", "images"))) {
-    fs::dir_delete(here::here("paper", "images"))
+if (test_directory_exists(here("docs"))) {
+  if (test_directory_exists(here("paper", "images"))) {
+    dir_delete(here("paper", "images"))
   }
 
-  fs::dir_copy(
-    path = here::here("docs", "images"),
-    new_path = here::here("paper", "images"),
+  dir_copy(
+    path = here("docs", "images"),
+    new_path = here("paper", "images"),
     overwrite = TRUE
   )
 }
 
-if (checkmate::test_file_exists(here::here("references.bib"))) {
-  fs::file_copy(
-    path = here::here("references.bib"),
-    new_path = here::here("paper", "paper.bib"),
+if (test_file_exists(here("references.bib"))) {
+  file_copy(
+    path = here("references.bib"),
+    new_path = here("paper", "paper.bib"),
     overwrite = TRUE
   )
 }
 
 data <-
-  here::here("paper", "paper.md") |>
-  readr::read_lines() |>
-  stringr::str_replace(
+  here("paper", "paper.md") |>
+  read_lines() |>
+  str_replace(
     pattern = "(?<=date: ).*",
     replacement =  Sys.Date() |> format("%e %B %Y")
   )
 
-data |> readr::write_lines(here::here("paper", "paper.md"))
+data |> write_lines(here("paper", "paper.md"))
 
-# Warn about fixing figures and figure references -----
+# Warn About Fixing Figures and Figure References -----
 
-cli::cli_alert_warning(
+cli_alert_warning(
   paste0(
     "Fix figures and figure references in {.strong paper/paper.md}. ",
     "See {.url https://joss.readthedocs.io/en/latest/example_paper.html} ",
@@ -129,6 +111,6 @@ cli::cli_alert_warning(
 
 # Check If the Script Ran Successfully -----
 
-beepr::beep(1)
+beep(1)
 
 Sys.sleep(3)

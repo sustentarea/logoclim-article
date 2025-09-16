@@ -1,4 +1,4 @@
-# Load packages -----
+# Load Packages -----
 
 library(brandr)
 library(downlit)
@@ -9,11 +9,13 @@ library(knitr)
 library(magrittr)
 library(quartor) # github.com/danielvartan/quartor
 library(ragg)
+library(readr)
 library(rlang)
 library(rutils) # github.com/danielvartan/rutils
+library(stringr)
 library(xml2)
 
-# Set general options -----
+# Set General Options -----
 
 options(
   dplyr.print_min = 6,
@@ -27,11 +29,11 @@ options(
   width = 77 # 80 - 3 for #> comment
 )
 
-# Set variables -----
+# Set Variables -----
 
 set.seed(2025)
 
-# Set knitr -----
+# Set `knitr`` -----
 
 clean_cache() |> shush()
 
@@ -61,3 +63,17 @@ bbt_write_quarto_bib(
   pattern = "\\.qmd$",
   wd = here()
 )
+
+# Fix Brackets in `.bib` Files -----
+
+here("references.bib") |>
+  read_lines() |>
+  str_replace_all(
+    pattern = fixed("\\{\\vphantom\\}{{"),
+    replacement = "{{\\{"
+  ) |>
+  str_replace_all(
+    pattern = fixed("}}\\vphantom\\{\\}"),
+    replacement = "\\}}}"
+  ) |>
+  write_lines(here("references.bib"))
