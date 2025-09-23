@@ -14,16 +14,18 @@ This repository contains the files associated with the [`LogoClim`](https://gith
 
 To cite this work, please use the following format:
 
-Vartanian, D., Garcia, L., & Carvalho, A. M. (2025). *{LogoClim}: WorldClim in NetLogo* \[Manuscript\]. Sustentarea Research and Extension Center at the University of São Paulo. https://sustentarea.github.io/logoclim-article
+Vartanian, D., Garcia, L., & Carvalho, A. M. (2025). *LogoClim: WorldClim in NetLogo* \[Manuscript\]. Sustentarea Research and Extension Center at the University of São Paulo. https://sustentarea.github.io/logoclim-article
 
 A BibTeX entry for LaTeX users is
 
 ```latex
-@techreport{vartanian2025,
-  title = {{LogoClim}: WorldClim in NetLogo},
+@misc{vartanian2025,
+  title = {LogoClim: WorldClim in NetLogo},
   author = {{Daniel Vartanian} and {Leandro Garcia} and {Aline Martins de Carvalho}},
   year = {2025},
-  institution = {Sustentarea Research and Extension Center at the University of São Paulo},
+  address = {São Paulo},
+  institution = {Sustentarea Research and Extension Group at the University of São Paulo},
+  langid = {en},
   url = {https://sustentarea.github.io/logoclim-article}
   note = {Manuscript}
 }

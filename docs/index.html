@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="generator" content="quarto-1.7.32">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Daniel Vartanian, Leandro Garcia, &amp; Aline M. de Carvalho">
-<meta name="dcterms.date" content="2025-09-16">
-<title>{LogoClim}: WorldClim in NetLogo</title>
+<meta name="dcterms.date" content="2025-09-23">
+<title>LogoClim: WorldClim in NetLogo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,18 +107,18 @@ div.csl-indent {
   }
 }</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<meta property="og:title" content="{LogoClim}: WorldClim in NetLogo">
+<meta property="og:title" content="LogoClim: WorldClim in NetLogo">
 <meta property="og:description" content="">
 <meta property="og:image" content="https://sustentarea.github.io/logoclim-article/images/og-image.png">
 <meta property="og:image:alt" content="Sustentarea Research and Extension Group">
 <meta property="og:image:height" content="1600">
 <meta property="og:image:width" content="2400">
-<meta name="citation_title" content="{LogoClim}: WorldClim in NetLogo">
+<meta name="citation_title" content="LogoClim: WorldClim in NetLogo">
 <meta name="citation_author" content="Daniel Vartanian, Leandro Garcia, &amp;amp; Aline M. de Carvalho">
-<meta name="citation_publication_date" content="2025-09-16">
-<meta name="citation_cover_date" content="2025-09-16">
+<meta name="citation_publication_date" content="2025-09-23">
+<meta name="citation_cover_date" content="2025-09-23">
 <meta name="citation_year" content="2025">
-<meta name="citation_online_date" content="2025-09-16">
+<meta name="citation_online_date" content="2025-09-23">
 <meta name="citation_fulltext_html_url" content="https://sustentarea.github.io/logoclim-article/">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=1,500 scientists lift the lid on reproducibility;,citation_abstract=Survey sheds light on the &amp;amp;amp;quot;crisis&amp;quot; rocking research.;,citation_author=Monya Baker;,citation_publication_date=2016-05-01;,citation_cover_date=2016-05-01;,citation_year=2016;,citation_fulltext_html_url=https://www.nature.com/articles/533452a;,citation_issue=7604;,citation_doi=10.1038/533452a;,citation_issn=1476-4687;,citation_volume=533;,citation_language=en-US;,citation_journal_title=Nature;,citation_publisher=Nature Publishing Group;">
@@ -134,7 +133,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=The roads ahead: Narratives for shared socioeconomic pathways describing world futures in the 21st century;,citation_abstract=Long-term scenarios play an important role in research on global environmental change. The climate change research community is developing new scenarios integrating future changes in climate and society to investigate climate impacts as well as options for mitigation and adaptation. One component of these new scenarios is a set of alternative futures of societal development known as the shared socioeconomic pathways (SSPs). The conceptual framework for the design and use of the SSPs calls for the development of global pathways describing the future evolution of key aspects of society that would together imply a range of challenges for mitigating and adapting to climate change. Here we present one component of these pathways: the SSP narratives, a set of five qualitative descriptions of future changes in demographics, human development, economy and lifestyle, policies and institutions, technology, and environment and natural resources. We describe the methods used to develop the narratives as well as how these pathways are hypothesized to produce particular combinations of challenges to mitigation and adaptation. Development of the narratives drew on expert opinion to (1) identify key determinants of these challenges that were essential to incorporate in the narratives and (2) combine these elements in the narratives in a manner consistent with scholarship on their inter-relationships. The narratives are intended as a description of plausible future conditions at the level of large world regions that can serve as a basis for integrated scenarios of emissions and land use, as well as climate impact, adaptation and vulnerability analyses.;,citation_author=Brian C. O’Neill;,citation_author=Elmar Kriegler;,citation_author=Kristie L. Ebi;,citation_author=Eric Kemp-Benedict;,citation_author=Keywan Riahi;,citation_author=Dale S. Rothman;,citation_author=Bas J. Ruijven;,citation_author=Detlef P. Vuuren;,citation_author=Joern Birkmann;,citation_author=Kasper Kok;,citation_author=Marc Levy;,citation_author=William Solecki;,citation_publication_date=2017;,citation_cover_date=2017;,citation_year=2017;,citation_fulltext_html_url=https://www.sciencedirect.com/science/article/pii/S0959378015000060;,citation_doi=10.1016/j.gloenvcha.2015.01.004;,citation_issn=0959-3780;,citation_volume=42;,citation_journal_title=Global Environmental Change;,citation_journal_abbrev=Global Environmental Change;">
 <meta name="citation_reference" content="citation_title=Reproducible research in computational science;,citation_abstract=Computational science has led to exciting new developments, but the nature of the work has exposed limitations in our ability to evaluate published findings. Reproducibility has the potential to serve as a minimum standard for judging scientific claims when full independent replication of a study is not possible.;,citation_author=Roger D. Peng;,citation_publication_date=2011-12-02;,citation_cover_date=2011-12-02;,citation_year=2011;,citation_fulltext_html_url=https://www.science.org/doi/10.1126/science.1213847;,citation_issue=6060;,citation_doi=10.1126/science.1213847;,citation_volume=334;,citation_journal_title=Science;,citation_publisher=American Association for the Advancement of Science;">
 <meta name="citation_reference" content="citation_title=A community of practice around peer review for long-term research software sustainability;,citation_abstract=Scientific open source projects are responsible for enabling many of the major advances in modern science including recent breakthroughs such as the Laser Interferometer Gravitational-Wave Observatory project recognized in the 2017 Nobel Prize for physics. However, much of this software ecosystem is developed ad hoc with no regard for sustainable software development practices. This problem is further compounded by the fact that researchers who develop software have little in the way of resources or academic recognition for their efforts. The rOpenSci Project, founded in 2011 with the explicit mission of developing software to support reproducible science, has in recent years undertaken an effort to improve the long tail of scientific software. In this paper, we describe our software peer-review system, which brings together the best of traditional academic review with new ideas from industry code review.;,citation_author=Karthik Ram;,citation_author=Carl Boettiger;,citation_author=Scott Chamberlain;,citation_author=Noam Ross;,citation_author=Maëlle Salmon;,citation_author=Stefanie Butland;,citation_publication_date=2019-03;,citation_cover_date=2019-03;,citation_year=2019;,citation_fulltext_html_url=https://ieeexplore.ieee.org/document/8554180;,citation_issue=2;,citation_doi=10.1109/MCSE.2018.2882753;,citation_issn=1558-366X;,citation_volume=21;,citation_language=en-US;,citation_journal_title=Computing in Science &amp;amp;amp; Engineering;">
-<meta name="citation_reference" content="citation_title={Logônia}: Plant growth response model in NetLogo;,citation_abstract={Logônia} is a NetLogo model that simulates the growth response of a fictional plant, logônia, under different climatic conditions. The model uses climate data from WorldClim 2.1 and demonstrates how to integrate the {LogoClim} model through the {LevelSpace} extension.;,citation_author=Daniel Vartanian;,citation_author=Leandro Garcia;,citation_author=Aline Martins Carvalho;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_fulltext_html_url=https://github.com/sustentarea/logonia;,citation_doi=10.17605/OSF.IO/TPY7S;">
+<meta name="citation_reference" content="citation_title=Logônia: Plant growth response model in NetLogo;,citation_abstract=Logônia is a NetLogo model that simulates the growth response of a fictional plant, logônia, under different climatic conditions. The model uses climate data from WorldClim 2.1 and demonstrates how to integrate the LogoClim model through the LevelSpace extension.;,citation_author=Daniel Vartanian;,citation_author=Leandro Garcia;,citation_author=Aline Martins Carvalho;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_fulltext_html_url=https://github.com/sustentarea/logonia;,citation_doi=10.17605/OSF.IO/TPY7S;">
 </head>
 <body class="nav-fixed quarto-light">
 
@@ -165,7 +164,6 @@ div.csl-indent {
 <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   <li><a href="#statement-of-need" id="toc-statement-of-need" class="nav-link" data-scroll-target="#statement-of-need">Statement of need</a></li>
-  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
   <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How it works</a></li>
   <li>
 <a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a>
@@ -180,7 +178,7 @@ div.csl-indent {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">{LogoClim}: WorldClim in NetLogo</h1>
+<h1 class="title">LogoClim: WorldClim in NetLogo</h1>
 </div>
 
 
@@ -197,7 +195,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2025-09-16</p>
+      <p class="date">2025-09-23</p>
     </div>
   </div>
   
@@ -238,9 +236,8 @@ Figure&nbsp;1: LogoClim Graphical User Interface — Brazil.
 </section><section id="statement-of-need" class="level1"><h1>Statement of need</h1>
 <p>The lack of reproducibility is a major concern in science <span class="citation" data-cites="baker2016">(<a href="#ref-baker2016" role="doc-biblioref">Baker, 2016</a>)</span>, including in computational research <span class="citation" data-cites="peng2011">(<a href="#ref-peng2011" role="doc-biblioref">Peng, 2011</a>)</span>. This challenge is particularly relevant for agent-based models, which are used to simulate complex phenomena <span class="citation" data-cites="grimm2006a grimm2020">(<a href="#ref-grimm2006a" role="doc-biblioref">Grimm et al., 2006</a>, <a href="#ref-grimm2020" role="doc-biblioref">2020</a>)</span>. One effective strategy to address this issue is the development of open, specialized tools that enhance transparency and promote standardization, and reusability among researchers <span class="citation" data-cites="ram2019 berger2024">(<a href="#ref-berger2024" role="doc-biblioref">Berger et al., 2024</a>; <a href="#ref-ram2019" role="doc-biblioref">Ram et al., 2019</a>)</span>. This is why <code>LogoClim</code> was created.</p>
 <p>The <code>LogoClim</code> model was developed for seamless integration with other models through NetLogo’s <a href="https://ccl.northwestern.edu/netlogo/docs/ls.html"><code>LevelSpace</code></a> extension <span class="citation" data-cites="hjorth2020">(<a href="#ref-hjorth2020" role="doc-biblioref">Hjorth et al., 2020</a>)</span>, which enables parallel execution and data exchange between models. This integration capability makes it particularly valuable for agent-based simulations that incorporate climate data to study ecological, environmental, or social processes affected by climate conditions.</p>
+<p>The model was originally developed as part of a project by the <a href="https://www.fsp.usp.br/sustentarea/">Sustentarea</a> Research and Extension Center, aimed at evaluating the impact of climate change on the health and nutrition of Brazilian children under five years old <span class="citation" data-cites="carvalho2023a">(<a href="#ref-carvalho2023a" role="doc-biblioref">Carvalho et al., 2023</a>)</span>. Over the course of its development, however, we realized that its applications extend well beyond the scope of that study.</p>
 <p>While other programming languages, such as <a href="https://www.r-project.org/">R</a>, offer tools like the <a href="https://CRAN.R-project.org/package=geodata"><code>geodata</code></a> package <span class="citation" data-cites="hijmans2024">(<a href="#ref-hijmans2024" role="doc-biblioref">Hijmans et al., 2024</a>)</span>, there are currently no equivalent tools providing this functionality for NetLogo.</p>
-</section><section id="motivation" class="level1"><h1>Motivation</h1>
-<p>The model was originally developed as part of a project by the <a href="https://www.fsp.usp.br/sustentarea/">Sustentarea</a> Research and Extension Center, aimed at evaluating the impact of climate change on the health and nutrition of Brazilian children under five years old <span class="citation" data-cites="carvalho2023a">(<a href="#ref-carvalho2023a" role="doc-biblioref">Carvalho et al., 2023</a>)</span>. During development, however, we recognized that the model had broader potential beyond the scope of our study. <code>LogoClim</code> can now be used as a submodel within agent-based models designed to help researchers, policymakers, and practitioners explore the potential impacts of climate change across different contexts and geographical areas.</p>
 </section><section id="how-it-works" class="level1"><h1>How it works</h1>
 <p><code>LogoClim</code> operates on a grid of patches, with each patch representing a geographic area and storing values for latitude, longitude, and selected climate variables. During simulation, patches update their colors based on the underlying data, enabling users to visualize spatial and temporal changes. The model interface also provides plots showing the mean, minimum, maximum, and standard deviation of the selected variable over time.</p>
 <p>The model supports all three climate data series from <a href="https://worldclim.org/">WorldClim 2.1</a>: long-term historical climate averages (1970–2000), historical monthly weather (1951–2024), and future climate projections (2021–2100). Each series is available at multiple spatial resolutions (from 10 minutes (~340 km² at the equator) to 30 seconds (~1 km² at the equator)), which can be selected within the model interface. Further details about each series are available on the WorldClim website.</p>
@@ -269,9 +266,9 @@ Figure&nbsp;2: LogoClim Graphical User Interface — United Kingdom.
 </div>
 <section id="how-to-cite" class="level2"><h2 class="anchored" data-anchor-id="how-to-cite">How to cite</h2>
 <p>To cite this paper in publications please use the following format:</p>
-<p>Vartanian, D., Garcia, L., &amp; Carvalho, A. M. (2025). <em>LogoClim: WorldClim in NetLogo</em> [Report]. Sustentarea Research and Extension Group at the University of São Paulo. <a href="https://sustentarea.github.io/logoclim-article" class="uri">https://sustentarea.github.io/logoclim-article</a></p>
+<p>Vartanian, D., Garcia, L., &amp; Carvalho, A. M. (2025). <em>LogoClim: WorldClim in NetLogo</em> [Manuscript]. Sustentarea Research and Extension Center at the University of São Paulo. https://sustentarea.github.io/logoclim-article</p>
 <p>A BibTeX entry for LaTeX users is</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>@techreport{vartanian2025,</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>@misc{vartanian2025,</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  title = {LogoClim: WorldClim in NetLogo},</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  author = {{Daniel Vartanian} and {Leandro Garcia} and {Aline Martins de Carvalho}},</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  year = {2025},</span>
@@ -279,7 +276,8 @@ Figure&nbsp;2: LogoClim Graphical User Interface — United Kingdom.
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  institution = {Sustentarea Research and Extension Group at the University of São Paulo},</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  langid = {en},</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  url = {https://sustentarea.github.io/logoclim-article}</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  note = {Manuscript}</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section><section id="license" class="level2"><h2 class="anchored" data-anchor-id="license">License</h2>
 <!-- badges: start -->
 <p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://img.shields.io/badge/license-CC_BY_4.0-lightgrey.svg" class="img-fluid" alt="License: CC BY 4.0"></a> <!-- badges: end --></p>
@@ -328,7 +326,7 @@ Peng, R. D. (2011). Reproducible research in computational science. <em>Science<
 Ram, K., Boettiger, C., Chamberlain, S., Ross, N., Salmon, M., &amp; Butland, S. (2019). A community of practice around peer review for long-term research software sustainability. <em>Computing in Science &amp; Engineering</em>, <em>21</em>(2), 59–65. <a href="https://doi.org/10.1109/MCSE.2018.2882753">https://doi.org/10.1109/MCSE.2018.2882753</a>
 </div>
 <div id="ref-vartanian2025g" class="csl-entry" role="listitem">
-Vartanian, D., Garcia, L., &amp; Carvalho, A. M. (2025). <em><span>{Logônia}</span>: <span>Plant</span> growth response model in <span>NetLogo</span></em> [Computer software]. <a href="https://doi.org/10.17605/OSF.IO/TPY7S">https://doi.org/10.17605/OSF.IO/TPY7S</a>
+Vartanian, D., Garcia, L., &amp; Carvalho, A. M. (2025). <em>Logônia: <span>Plant</span> growth response model in <span>NetLogo</span></em> [Computer software]. <a href="https://doi.org/10.17605/OSF.IO/TPY7S">https://doi.org/10.17605/OSF.IO/TPY7S</a>
 </div>
 </div>
 

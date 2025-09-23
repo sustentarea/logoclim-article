@@ -63,17 +63,3 @@ bbt_write_quarto_bib(
   pattern = "\\.qmd$",
   wd = here()
 )
-
-# Fix Brackets in `.bib` Files -----
-
-here("references.bib") |>
-  read_lines() |>
-  str_replace_all(
-    pattern = fixed("\\{\\vphantom\\}{{"),
-    replacement = "{{\\{"
-  ) |>
-  str_replace_all(
-    pattern = fixed("}}\\vphantom\\{\\}"),
-    replacement = "\\}}}"
-  ) |>
-  write_lines(here("references.bib"))
