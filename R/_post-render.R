@@ -58,7 +58,7 @@ swap_list <- list(
 )
 
 for (i in swap_list) {
-  quartor:::swap_value_between_files(
+  swap_value_between_files(
     from = i$from,
     to = i$to,
     begin_tag = i$begin_tag,
@@ -94,7 +94,7 @@ data <-
   read_lines() |>
   str_replace(
     pattern = "(?<=date: ).*",
-    replacement =  Sys.Date() |> format("%e %B %Y")
+    replacement = Sys.Date() |> format("%e %B %Y")
   )
 
 data |> write_lines(here("paper", "paper.md"))
